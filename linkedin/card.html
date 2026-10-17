@@ -3,109 +3,163 @@
 <head>
   <meta charset="utf-8">
   <title>LinkedIn infographic — Buffer or baseline?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,650;0,700;1,400&family=Source+Serif+4:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #faf7f2;
-      --ink: #1f2a36;
-      --gray: #5a6572;
-      --red: #c0392b;
-      --blue: #2e6f9e;
-      --gold: #b98a2f;
-      --dark: #22303c;
-      --rule: #e3dccf;
+      --paper: #f7f3eb;
+      --ink: #1c1917;
+      --muted: #57534e;
+      --rule: #c9c4bc;
+      --navy: #1f3a5f;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html, body { background: #ddd; }
     .card {
       width: 1080px;
       height: 1350px;
-      background: var(--bg);
+      background: var(--paper);
       color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      padding: 64px 68px 56px;
+      font-family: "Source Sans 3", Calibri, "Segoe UI", sans-serif;
+      padding: 36px 44px 28px;
       display: flex;
       flex-direction: column;
     }
     .kicker {
-      font-size: 18px;
+      font-size: 13px;
       font-weight: 700;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 22px;
+      color: var(--muted);
+      margin-bottom: 10px;
     }
     h1 {
-      font-size: 58px;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
-      margin-bottom: 28px;
-    }
-    .dek {
-      font-size: 26px;
-      line-height: 1.35;
-      color: var(--gray);
-      margin-bottom: 40px;
-    }
-    .rule { height: 3px; background: var(--gold); margin: 0 0 36px; width: 140px; }
-    .stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px 32px;
-      flex: 1;
-    }
-    .stat-value {
-      display: block;
-      font-size: 52px;
-      font-weight: 800;
-      font-variant-numeric: tabular-nums;
-      line-height: 1;
+      font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+      font-size: 34px;
+      font-weight: 600;
+      line-height: 1.12;
+      letter-spacing: -0.015em;
       margin-bottom: 8px;
     }
-    .red { color: var(--red); }
-    .blue { color: var(--blue); }
-    .stat-label { font-size: 22px; font-weight: 700; display: block; margin-bottom: 6px; }
-    .stat-sub { font-size: 18px; color: var(--gray); line-height: 1.35; }
+    .dek {
+      font-size: 17px;
+      line-height: 1.35;
+      color: var(--muted);
+      margin-bottom: 12px;
+      max-width: 42em;
+    }
+    hr.rule {
+      height: 1px;
+      width: 4.2rem;
+      background: var(--ink);
+      border: 0;
+      margin: 0 0 12px;
+    }
+    .cap {
+      font-size: 14px;
+      font-weight: 650;
+      color: var(--ink);
+      margin: 0 0 4px;
+      line-height: 1.3;
+    }
+    .cap em { font-style: italic; font-weight: 400; color: var(--muted); }
+    .fig { margin: 0 0 2px; }
+    .fig img { width: 100%; height: auto; display: block; }
+    .main-fig img { max-height: 420px; object-fit: contain; object-position: left top; }
+    .words {
+      font-size: 14px;
+      color: var(--muted);
+      margin: 4px 0 12px;
+      font-variant-numeric: tabular-nums;
+    }
+    .words b { color: var(--ink); font-weight: 700; }
+    .pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 12px;
+    }
+    .pair img { max-height: 230px; object-fit: contain; object-position: left top; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      font-variant-numeric: tabular-nums;
+      margin: 4px 0 0;
+    }
+    th, td { text-align: left; padding: 5px 10px 5px 0; border-bottom: 1px solid var(--rule); }
+    th { font-weight: 650; color: var(--muted); font-size: 13px; }
+    td.num { text-align: right; padding-right: 0; width: 22%; }
+    td.held { color: var(--navy); font-weight: 700; }
     footer {
-      border-top: 3px solid var(--gold);
-      padding-top: 22px;
-      font-size: 18px;
-      color: var(--gray);
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--ink);
+      font-size: 13px;
+      color: var(--muted);
       line-height: 1.4;
     }
-    footer strong { color: var(--ink); }
+    footer strong { color: var(--ink); font-weight: 650; }
   </style>
 </head>
 <body>
   <article class="card">
-    <p class="kicker">SSRN preprint · GESIS Panel.pop</p>
+    <p class="kicker">GESIS Panel.pop · employed adults, 2018 · N = 3,052</p>
     <h1>It marked who was better off. It did not slow the decline.</h1>
-    <p class="dek">Self-compassion measured in 2018, in a German probability panel of employed adults. Three tests of one resource claim.</p>
-    <div class="rule"></div>
-    <div class="stats">
-      <div>
-        <span class="stat-value red">−6.22</span>
-        <span class="stat-label">Same drop in life satisfaction</span>
-        <span class="stat-sub">0–100 metric, 2020–2021. −6.02 vs. −6.42 points at ±1 SD of the trait.</span>
+    <p class="dek">Self-compassion measured in 2018, before COVID-19. Three tests of one resource claim in a German probability panel.</p>
+    <hr class="rule">
+
+    <p class="cap">Life satisfaction fell 6.22 points (0–100) across 2020–2021 at the same rate across the trait. <em>The 2020 level was higher (b = 2.16). The disruption slope was not (b = −0.10).</em></p>
+    <div class="fig main-fig">
+      <img src="../assets/fig2_ls_trajectories.png" alt="Implied life-satisfaction trajectories at high, average, and low trait self-compassion, 2014–2025, with trait coefficients on the 2020 level and three slopes.">
+    </div>
+    <p class="words"><b>BF<sub>01</sub> = 51.5</b> against a buffering path. At ±1 SD of the trait the drop is −6.02 vs. −6.42.</p>
+
+    <div class="pair">
+      <div class="panel">
+        <p class="cap">Telework, 2021–2025, was not a buffer. <em>Interaction p = .076, BF<sub>01</sub> = 12.28. Simple slopes, read as descriptive, ran opposite the claim.</em></p>
+        <div class="fig">
+          <img src="../assets/fig3_telework_moderation.png" alt="Within-person telework simple slopes at high, average, and low trait self-compassion, and the cross-level interaction with 95 percent intervals.">
+        </div>
       </div>
-      <div>
-        <span class="stat-value">51.5</span>
-        <span class="stat-label">BF<sub>01</sub> against buffering</span>
-        <span class="stat-sub">The disruption slope was unrelated to the trait. Telework moderation also not supported.</span>
-      </div>
-      <div>
-        <span class="stat-value blue">−.36</span>
-        <span class="stat-label">Loneliness six years later</span>
-        <span class="stat-sub">Largest association in the study. Not a hypothesized path. Out-of-fold ΔR² = .036.</span>
-      </div>
-      <div>
-        <span class="stat-value">−.30</span>
-        <span class="stat-label">Self-critical items, not self-caring</span>
-        <span class="stat-sub">Fully standardized β for 2024 loneliness. Self-caring unique β = .01. Held after neuroticism.</span>
+      <div class="panel">
+        <p class="cap">In 2024, overwhelm — not behavior. <em>Digital overwhelm β = −.20, 95% CI [−.25, −.16]. Familiarization OR = 0.98.</em></p>
+        <div class="fig">
+          <img src="../assets/fig4_h3_coefficients.png" alt="Standardized coefficients for digital overwhelm, technology favorability, and job-loss belief, and the odds ratio for recent familiarization, with 95 percent intervals.">
+        </div>
       </div>
     </div>
+
+    <p class="cap">What the total score was. <em>The associations that held ran through reverse-scored self-critical items. 2024 loneliness was not a stated prediction.</em></p>
+    <table>
+      <thead>
+        <tr>
+          <th></th>
+          <th class="num">2024 loneliness</th>
+          <th class="num">Digital overwhelm</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Self-critical items (fully standardized β)</td>
+          <td class="num held">−.30</td>
+          <td class="num held">−.21</td>
+        </tr>
+        <tr>
+          <td>Self-caring items, entered with them</td>
+          <td class="num">.01</td>
+          <td class="num">~0</td>
+        </tr>
+        <tr>
+          <td>Zero-order r, 2018 trait with 2024 loneliness</td>
+          <td class="num held">−.36</td>
+          <td class="num">—</td>
+        </tr>
+      </tbody>
+    </table>
+
     <footer>
-      <strong>Monnot (2026).</strong> Buffer or baseline? Trait self-compassion and employee well-being.<br>
-      N = 3,052 · doi.org/10.2139/ssrn.7622018 · mjmonnot.github.io/buffer-or-baseline
+      <strong>Monnot (2026).</strong> Buffer or baseline? Observational panel; the trait was not manipulated. Intervals on the figures are 95% CIs. doi.org/10.2139/ssrn.7622018 · mjmonnot.github.io/buffer-or-baseline
     </footer>
   </article>
 </body>

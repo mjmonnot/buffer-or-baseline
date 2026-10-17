@@ -3,55 +3,77 @@
 <head>
   <meta charset="utf-8">
   <title>LinkedIn carousel — Buffer or baseline?</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,650;0,700;1,400&family=Source+Serif+4:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #faf7f2; --ink: #1f2a36; --gray: #5a6572;
-      --red: #c0392b; --blue: #2e6f9e; --gold: #b98a2f; --dark: #22303c;
+      --paper: #f7f3eb; --ink: #1c1917; --muted: #57534e; --rule: #c9c4bc; --navy: #1f3a5f;
     }
     * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { background: #ccc; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    body { background: #ccc; padding: 24px; font-family: "Source Sans 3", Calibri, sans-serif; }
     .row { display: flex; flex-direction: column; gap: 24px; align-items: center; }
     .slide {
-      width: 1080px; height: 1080px; background: var(--bg); color: var(--ink);
-      padding: 72px 76px 64px; display: flex; flex-direction: column;
+      width: 1080px; height: 1080px; background: var(--paper); color: var(--ink);
+      padding: 48px 52px 40px; display: flex; flex-direction: column;
     }
-    .kicker { font-size: 18px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
-    h1 { font-size: 62px; line-height: 1.06; letter-spacing: -0.02em; }
-    .num { font-size: 120px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; margin: 12px 0 24px; }
-    .red { color: var(--red); } .blue { color: var(--blue); }
-    p { font-size: 28px; line-height: 1.35; color: var(--gray); max-width: 18em; }
-    footer { margin-top: auto; font-size: 20px; color: var(--gray); border-top: 3px solid var(--gold); padding-top: 20px; }
-    footer strong { color: var(--ink); }
+    .kicker {
+      font-size: 14px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 12px;
+    }
+    h1 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 36px; font-weight: 600; line-height: 1.12; letter-spacing: -0.015em;
+    }
+    .num { font-size: 56px; font-weight: 700; line-height: 1; font-variant-numeric: tabular-nums; margin: 8px 0 10px; color: var(--ink); }
+    p { font-size: 20px; line-height: 1.35; color: var(--muted); }
+    .fig { margin: 16px 0 auto; min-height: 0; }
+    .fig img { width: 100%; max-height: 520px; object-fit: contain; object-position: left top; display: block; }
+    footer {
+      font-size: 16px; color: var(--muted);
+      border-top: 1px solid var(--ink); padding-top: 14px;
+    }
+    footer strong { color: var(--ink); font-weight: 650; }
   </style>
 </head>
 <body>
   <div class="row">
     <article class="slide" id="s1">
-      <p class="kicker">1 / 4 · SSRN preprint</p>
+      <p class="kicker">1 / 4 · GESIS Panel.pop · N = 3,052</p>
       <h1>Buffer or baseline?</h1>
-      <p style="margin-top:28px">Self-compassion is supposed to mark who is better off <em>and</em> who loses less when a demand arrives. A German probability panel of employed adults (N = 3,052) separates the two.</p>
-      <footer><strong>Monnot (2026)</strong> · GESIS Panel.pop · doi.org/10.2139/ssrn.7622018</footer>
+      <p style="margin-top:14px">Self-compassion is supposed to mark who is better off and who loses less when a demand arrives. A German probability panel of employed adults separates the two.</p>
+      <div class="fig">
+        <img src="../assets/fig1_design_timeline.png" alt="Design timeline of measures in the GESIS Panel.pop, 2014–2025, and sample flow into the analytic N of 3,052.">
+      </div>
+      <footer><strong>Monnot (2026)</strong> · doi.org/10.2139/ssrn.7622018</footer>
     </article>
     <article class="slide" id="s2">
       <p class="kicker">2 / 4 · Hypothesis 1 not supported</p>
-      <div class="num red">−6.22</div>
+      <div class="num">−6.22</div>
       <h1>The decline was shared.</h1>
-      <p>Life satisfaction, 0–100, across 2020–2021. −6.02 points at −1 SD of the trait; −6.42 at +1 SD. BF<sub>01</sub> = 51.52 against a buffering path.</p>
-      <footer>Telework moderation (2021–2025) was also not supported, BF<sub>01</sub> = 12.28.</footer>
+      <p>Life satisfaction, 0–100, across 2020–2021. −6.02 at −1 SD of the trait; −6.42 at +1 SD. BF<sub>01</sub> = 51.52 against a buffering path.</p>
+      <div class="fig">
+        <img src="../assets/fig2_ls_trajectories.png" alt="Implied life-satisfaction trajectories and trait coefficients on the 2020 level and three slopes.">
+      </div>
+      <footer>Higher 2020 level (b = 2.16). No reliable association with the disruption slope.</footer>
     </article>
     <article class="slide" id="s3">
-      <p class="kicker">3 / 4 · The association that held</p>
-      <div class="num blue">−.36</div>
-      <h1>Loneliness six years later.</h1>
-      <p>2018 score with 2024 loneliness — the largest association in the study, and not a hypothesized path. Digital overwhelm β = −.20. Out-of-fold ΔR² = .036 for loneliness.</p>
+      <p class="kicker">3 / 4 · Hypothesis 2 not supported</p>
+      <h1>Telework was not a buffer.</h1>
+      <p style="margin-top:10px">Within-person telework share, 2021–2025. Interaction b = −0.96, p = .076, BF<sub>01</sub> = 12.28. Simple slopes, read as descriptive, ran opposite the hypothesized buffer. Intervals are 95% CIs.</p>
+      <div class="fig">
+        <img src="../assets/fig3_telework_moderation.png" alt="Telework simple slopes by trait self-compassion and the cross-level interaction.">
+      </div>
       <footer>Observational panel. Not an intervention effect.</footer>
     </article>
     <article class="slide" id="s4">
-      <p class="kicker">4 / 4 · What the total score was</p>
-      <div class="num">−.30</div>
-      <h1>Self-criticism, not self-kindness.</h1>
-      <p>Fully standardized β for 2024 loneliness on the reverse-scored self-critical items. Self-caring unique β = .01. Six-item neuroticism control: β = −.24.</p>
-      <footer>Paper and companion · doi.org/10.2139/ssrn.7622018 · mjmonnot.github.io/buffer-or-baseline</footer>
+      <p class="kicker">4 / 4 · What held, and what the score was</p>
+      <div class="num">−.36</div>
+      <h1>Loneliness six years later.</h1>
+      <p>2018 trait with 2024 loneliness — largest association, not hypothesized. Overwhelm β = −.20, 95% CI [−.25, −.16]. Self-critical items β = −.30; self-caring β = .01.</p>
+      <div class="fig">
+        <img src="../assets/fig4_h3_coefficients.png" alt="Hypothesis 3 coefficients for 2024 technology appraisals and familiarization.">
+      </div>
+      <footer><strong>Paper and companion</strong> · doi.org/10.2139/ssrn.7622018 · mjmonnot.github.io/buffer-or-baseline</footer>
     </article>
   </div>
 </body>
