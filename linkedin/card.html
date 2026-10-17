@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LinkedIn infographic — Buffer or baseline?</title>
+  <style>
+    :root {
+      --bg: #faf7f2;
+      --ink: #1f2a36;
+      --gray: #5a6572;
+      --red: #c0392b;
+      --blue: #2e6f9e;
+      --gold: #b98a2f;
+      --dark: #22303c;
+      --rule: #e3dccf;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { background: #ddd; }
+    .card {
+      width: 1080px;
+      height: 1350px;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 64px 68px 56px;
+      display: flex;
+      flex-direction: column;
+    }
+    .kicker {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 22px;
+    }
+    h1 {
+      font-size: 58px;
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin-bottom: 28px;
+    }
+    .dek {
+      font-size: 26px;
+      line-height: 1.35;
+      color: var(--gray);
+      margin-bottom: 40px;
+    }
+    .rule { height: 3px; background: var(--gold); margin: 0 0 36px; width: 140px; }
+    .stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px 32px;
+      flex: 1;
+    }
+    .stat-value {
+      display: block;
+      font-size: 52px;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .red { color: var(--red); }
+    .blue { color: var(--blue); }
+    .stat-label { font-size: 22px; font-weight: 700; display: block; margin-bottom: 6px; }
+    .stat-sub { font-size: 18px; color: var(--gray); line-height: 1.35; }
+    footer {
+      border-top: 3px solid var(--gold);
+      padding-top: 22px;
+      font-size: 18px;
+      color: var(--gray);
+      line-height: 1.4;
+    }
+    footer strong { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <article class="card">
+    <p class="kicker">SSRN preprint · GESIS Panel.pop</p>
+    <h1>It marked who was better off. It did not slow the decline.</h1>
+    <p class="dek">Self-compassion measured in 2018, in a German probability panel of employed adults. Three tests of one resource claim.</p>
+    <div class="rule"></div>
+    <div class="stats">
+      <div>
+        <span class="stat-value red">−6.22</span>
+        <span class="stat-label">Same drop in life satisfaction</span>
+        <span class="stat-sub">0–100 metric, 2020–2021. −6.02 vs. −6.42 points at ±1 SD of the trait.</span>
+      </div>
+      <div>
+        <span class="stat-value">51.5</span>
+        <span class="stat-label">BF<sub>01</sub> against buffering</span>
+        <span class="stat-sub">The disruption slope was unrelated to the trait. Telework moderation also not supported.</span>
+      </div>
+      <div>
+        <span class="stat-value blue">−.36</span>
+        <span class="stat-label">Loneliness six years later</span>
+        <span class="stat-sub">Largest association in the study. Not a hypothesized path. Out-of-fold ΔR² = .036.</span>
+      </div>
+      <div>
+        <span class="stat-value">−.30</span>
+        <span class="stat-label">Self-critical items, not self-caring</span>
+        <span class="stat-sub">Fully standardized β for 2024 loneliness. Self-caring unique β = .01. Held after neuroticism.</span>
+      </div>
+    </div>
+    <footer>
+      <strong>Monnot (2026).</strong> Buffer or baseline? Trait self-compassion and employee well-being.<br>
+      N = 3,052 · doi.org/10.2139/ssrn.7622018 · mjmonnot.github.io/buffer-or-baseline
+    </footer>
+  </article>
+</body>
+</html>

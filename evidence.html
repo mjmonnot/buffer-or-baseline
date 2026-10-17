@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The evidence — Buffer or baseline?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <nav class="site-nav" aria-label="Site">
+    <ul>
+      <li><a href="index.html">Overview</a></li>
+      <li><a href="evidence.html" aria-current="page">The evidence</a></li>
+      <li><a href="playbook.html">What to watch</a></li>
+      <li><a href="references.html">Key references</a></li>
+    </ul>
+  </nav>
+
+  <header class="masthead">
+    <p class="kicker">The evidence</p>
+    <h1>Three tests, then the scoring question.</h1>
+    <p class="dek">Hypotheses 1–3 were specified before structural coefficients were examined. Bayes factors, out-of-fold prediction, the two-factor split, and the neuroticism-adjusted component models were added at the reporting stage and are labeled as such in the paper.</p>
+  </header>
+
+  <section>
+    <h2 class="section-label">Design timeline</h2>
+    <figure class="paper-figure">
+      <img src="assets/fig1_design_timeline.png" alt="Study timeline from 2014 through 2025 showing self-compassion in 2018, the 2020–2021 disruption, telework share from 2021 to 2025, and 2024 technology items." width="1200" height="500">
+      <figcaption><strong>Figure 1 from the paper.</strong> The predictor is the 2018 Self-Compassion Scale–Short Form. Outcomes sit years later. Telework share was not measured in 2020, so the moderation window begins in late 2021.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2 class="section-label">Hypothesis 1 · Disruption</h2>
+    <p class="section-intro">Life satisfaction fell 6.22 points on a 0–100 metric across 2020–2021. The trait was associated with a higher 2020 level (<em>b</em> = 2.16, 95% CI [1.40, 2.91], β = .14) and was not associated with the disruption slope (<em>b</em> = −0.10, 95% CI [−0.71, 0.51], <em>p</em> = .746). 2020 loneliness, administered to a random half-sample (<em>n</em> = 1,212), was unrelated (<em>b</em> = −0.06, <em>p</em> = .166). Bayes factors favored the models without those paths (<em>BF</em><sub>01</sub> = 51.52 and 18.42).</p>
+  </section>
+
+  <section>
+    <h2 class="section-label">Hypothesis 2 · Telework</h2>
+    <p class="section-intro">The cross-level interaction of the trait with within-person telework share was not significant, <em>b</em> = −0.96, 95% CI [−2.01, 0.10], <em>p</em> = .076, <em>BF</em><sub>01</sub> = 12.28. The evidence against this path is weaker than for the disruption slope. Simple slopes, which should be read as descriptive because the interaction was not significant, were near zero at −1 <em>SD</em> and negative at +1 <em>SD</em>.</p>
+    <figure class="paper-figure">
+      <img src="assets/fig3_telework_moderation.png" alt="Telework moderation figure with a Johnson-Neyman panel and simple-slope panel." width="1200" height="620">
+      <figcaption><strong>Figure 3 from the paper.</strong> Within-person telework and life satisfaction. The Johnson–Neyman band excludes zero above 0.25 <em>SD</em> of the trait. Because the interaction itself was not significant, the pattern is a description, not a confirmed reversal of the hypothesized buffer.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2 class="section-label">Hypothesis 3 · 2024 technology appraisals</h2>
+    <p class="section-intro">Controlling for prepandemic well-being, age, education, and technology affinity, the trait was associated with lower digital overwhelm (β = −.20) and more favorable appraisals (β = .10). It was not associated with the digitalization job-loss belief or with the odds of recent familiarization (<em>OR</em> = 0.98). Two of four outcomes supported the hypothesis.</p>
+    <figure class="paper-figure">
+      <img src="assets/fig4_h3_coefficients.png" alt="Coefficient plot of 2024 technology outcomes on trait self-compassion." width="1200" height="520">
+      <figcaption><strong>Figure 4 from the paper.</strong> Standardized associations for the 2024 outcomes. Overwhelm and favorability are away from zero; the job-loss belief and familiarization are not.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2 class="section-label">The scoring result</h2>
+    <ul class="plain-list">
+      <li>Positive and negative item sets correlated only <em>r</em> = .32–.39. The hypothesized trait factor correlated <em>r</em> = .98 with reverse-scored self-critical items and <em>r</em> = .38 with self-caring items.</li>
+      <li>Full-sample component models (estimation <em>N</em> = 3,052): self-critical composite β = −.297 for 2024 loneliness and β = −.213 for overwhelm. Self-caring items entered simultaneously: β = .010 and near zero.</li>
+      <li>Six-item Big Five Inventory–2 neuroticism control (2017; <em>n</em> = 1,616 for that check): loneliness β = −.239, overwhelm β = −.169. The two-item BFI-10 control is weaker (α ≈ .47–.54) and is not the better estimate of residual confounding.</li>
+      <li>Out-of-fold nested cross-validation: the 2018 composite improved prediction of 2024 loneliness (Δ<em>R</em>² = .036) and, more modestly, overwhelm (Δ<em>R</em>² = .008). It did not improve favorability, the job-loss belief, or familiarization.</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Monnot, M. J. (2026). Buffer or baseline? SSRN preprint. <a href="https://doi.org/10.2139/ssrn.7622018">https://doi.org/10.2139/ssrn.7622018</a></p>
+    <p><a href="https://mjmonnot.github.io/">mjmonnot.github.io</a> · <a href="mailto:matt@vocentive.com">matt@vocentive.com</a></p>
+  </footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LinkedIn carousel — Buffer or baseline?</title>
+  <style>
+    :root {
+      --bg: #faf7f2; --ink: #1f2a36; --gray: #5a6572;
+      --red: #c0392b; --blue: #2e6f9e; --gold: #b98a2f; --dark: #22303c;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { background: #ccc; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+    .row { display: flex; flex-direction: column; gap: 24px; align-items: center; }
+    .slide {
+      width: 1080px; height: 1080px; background: var(--bg); color: var(--ink);
+      padding: 72px 76px 64px; display: flex; flex-direction: column;
+    }
+    .kicker { font-size: 18px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+    h1 { font-size: 62px; line-height: 1.06; letter-spacing: -0.02em; }
+    .num { font-size: 120px; font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; margin: 12px 0 24px; }
+    .red { color: var(--red); } .blue { color: var(--blue); }
+    p { font-size: 28px; line-height: 1.35; color: var(--gray); max-width: 18em; }
+    footer { margin-top: auto; font-size: 20px; color: var(--gray); border-top: 3px solid var(--gold); padding-top: 20px; }
+    footer strong { color: var(--ink); }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <article class="slide" id="s1">
+      <p class="kicker">1 / 4 · SSRN preprint</p>
+      <h1>Buffer or baseline?</h1>
+      <p style="margin-top:28px">Self-compassion is supposed to mark who is better off <em>and</em> who loses less when a demand arrives. A German probability panel of employed adults (N = 3,052) separates the two.</p>
+      <footer><strong>Monnot (2026)</strong> · GESIS Panel.pop · doi.org/10.2139/ssrn.7622018</footer>
+    </article>
+    <article class="slide" id="s2">
+      <p class="kicker">2 / 4 · Hypothesis 1 not supported</p>
+      <div class="num red">−6.22</div>
+      <h1>The decline was shared.</h1>
+      <p>Life satisfaction, 0–100, across 2020–2021. −6.02 points at −1 SD of the trait; −6.42 at +1 SD. BF<sub>01</sub> = 51.52 against a buffering path.</p>
+      <footer>Telework moderation (2021–2025) was also not supported, BF<sub>01</sub> = 12.28.</footer>
+    </article>
+    <article class="slide" id="s3">
+      <p class="kicker">3 / 4 · The association that held</p>
+      <div class="num blue">−.36</div>
+      <h1>Loneliness six years later.</h1>
+      <p>2018 score with 2024 loneliness — the largest association in the study, and not a hypothesized path. Digital overwhelm β = −.20. Out-of-fold ΔR² = .036 for loneliness.</p>
+      <footer>Observational panel. Not an intervention effect.</footer>
+    </article>
+    <article class="slide" id="s4">
+      <p class="kicker">4 / 4 · What the total score was</p>
+      <div class="num">−.30</div>
+      <h1>Self-criticism, not self-kindness.</h1>
+      <p>Fully standardized β for 2024 loneliness on the reverse-scored self-critical items. Self-caring unique β = .01. Six-item neuroticism control: β = −.24.</p>
+      <footer>Paper and companion · doi.org/10.2139/ssrn.7622018 · mjmonnot.github.io/buffer-or-baseline</footer>
+    </article>
+  </div>
+</body>
+</html>
