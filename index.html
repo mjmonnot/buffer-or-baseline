@@ -4,12 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Buffer or baseline? Self-compassion in a national probability panel</title>
-  <meta name="description" content="Prepandemic self-compassion marked who was better off later. It did not slow the 2020–2021 decline in life satisfaction. Companion to Monnot (2026), SSRN.">
+  <meta name="description" content="Self-compassion measured in 2018 marked lower loneliness and less digital overwhelm in 2024, carried by the self-critical items. Companion to Monnot (2026), SSRN.">
   <link rel="canonical" href="https://mjmonnot.github.io/buffer-or-baseline/">
   <meta property="og:title" content="Buffer or baseline? Self-compassion in a national probability panel">
-  <meta property="og:description" content="It marked who was better off. It did not slow the decline. N = 3,052 employed adults in the GESIS Panel.pop.">
+  <meta property="og:description" content="Self-compassion measured in 2018 marked who was less lonely and less overwhelmed in 2024. N = 3,052 employed adults in the GESIS Panel.pop.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mjmonnot.github.io/buffer-or-baseline/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,650;0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -25,8 +27,9 @@
 
   <header class="masthead">
     <p class="kicker">Employee well-being · Research companion</p>
-    <h1>It marked who was better off. It did not slow the decline.</h1>
-    <p class="dek">Conservation of resources theory treats self-compassion as a personal resource that should both sit with a higher baseline of well-being and blunt loss when a demand arrives. In the GESIS Panel.pop — a probability sample of German adults employed in 2018 (<em>N</em> = 3,052) — the second claim failed. Life satisfaction fell 6.22 points (0–100) across the 2020–2021 disruption at the same rate across levels of the trait. The first claim held later: the same 2018 measure was associated with lower loneliness and less digital overwhelm in 2024, and those associations ran through the self-critical items, not the self-caring ones.</p>
+    <h1>Self-compassion measured in 2018 marked who was less lonely and less overwhelmed in 2024.</h1>
+    <p class="dek">In the GESIS Panel.pop, a probability sample of German adults employed in 2018 (<em>N</em> = 3,052), a Self-Compassion Scale score taken before the disruption was associated with lower loneliness (<em>r</em> = −.36) and less digital overwhelm (β = −.20) six years later, net of earlier well-being and technology affinity. The associations ran through the self-critical items, and they held after a neuroticism control.</p>
+    <hr class="rule">
     <p><a class="read-paper" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7622018">Read the preprint on SSRN</a></p>
   </header>
 
@@ -34,97 +37,97 @@
     <h2 class="section-label" id="glance">At a glance</h2>
     <div class="strip">
       <div class="stat">
-        <span class="stat-value red">−6.22</span>
-        <span class="stat-label">Same decline</span>
-        <span class="stat-sub">Life satisfaction, 0–100 metric, across the disruption. −6.02 points at −1 <em>SD</em> of the trait; −6.42 at +1 <em>SD</em>.</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value">51.5</span>
-        <span class="stat-label"><em>BF</em><sub>01</sub> against buffering</span>
-        <span class="stat-sub">Data favored the model with no disruption-slope path. Telework moderation <em>BF</em><sub>01</sub> = 12.28.</span>
-      </div>
-      <div class="stat">
-        <span class="stat-value blue">−.36</span>
-        <span class="stat-label">2018 trait ↔ 2024 loneliness</span>
-        <span class="stat-sub">Largest association in the study. Not a hypothesized path. Out-of-fold Δ<em>R</em>² = .036.</span>
+        <span class="stat-value held">−.36</span>
+        <span class="stat-label">2018 trait with 2024 loneliness</span>
+        <span class="stat-sub">Largest association in the study. Out-of-fold Δ<em>R</em>² = .036.</span>
       </div>
       <div class="stat">
         <span class="stat-value">−.30</span>
         <span class="stat-label">Self-critical items</span>
-        <span class="stat-sub">Fully standardized β for 2024 loneliness. Self-caring items β = .01. Held after a six-item neuroticism control (β = −.24).</span>
+        <span class="stat-sub">Fully standardized β for 2024 loneliness. After a six-item neuroticism control, β = −.24.</span>
+      </div>
+      <div class="stat">
+        <span class="stat-value">−.20</span>
+        <span class="stat-label">2024 digital overwhelm</span>
+        <span class="stat-sub">Standardized β, net of earlier well-being, age, education, and technology affinity.</span>
       </div>
     </div>
   </section>
 
-  <section aria-labelledby="tests">
-    <h2 class="section-label" id="tests">1 · Three tests of one resource claim</h2>
-    <p class="section-intro">Self-compassion was measured in 2018, before the disruption. The three tests ask different things of it: change under an acute demand, moderation of a within-person demand, and association with later appraisals.</p>
-    <div class="tests">
-      <article class="test">
-        <span class="flag warn">Not supported</span>
-        <h3>Hypothesis 1 · Disruption</h3>
-        <p>Higher prepandemic self-compassion would be associated with a smaller 2020–2021 decline in life satisfaction and with lower 2020 loneliness. The decline was nearly uniform. 2020 loneliness was unrelated.</p>
-      </article>
-      <article class="test">
-        <span class="flag warn">Not supported</span>
-        <h3>Hypothesis 2 · Telework</h3>
-        <p>The trait would moderate within-person telework share (2021–2025). The interaction was not significant (<em>p</em> = .076). Simple slopes, read as descriptive, ran opposite the hypothesized buffer.</p>
-      </article>
-      <article class="test">
-        <span class="flag ok">Partial</span>
-        <h3>Hypothesis 3 · 2024 appraisals</h3>
-        <p>Lower digital overwhelm (β = −.20) and more favorable technology appraisals (β = .10). No association with a job-loss belief or with having recently learned a new tool.</p>
-      </article>
-    </div>
-  </section>
-
   <section aria-labelledby="explorer">
-    <h2 class="section-label" id="explorer">2 · Read one path at a time</h2>
-    <p class="section-intro">The coefficients below are the published ones. They are associations in an observational panel, not effects of changing the trait.</p>
+    <h2 class="section-label" id="explorer">Read one path at a time</h2>
+    <p class="section-intro">Published associations in an observational panel, not effects of changing the trait.</p>
     <div class="calc">
       <div>
         <fieldset>
           <legend>Which path?</legend>
           <label class="control-note" for="path-select">Choose a published path</label>
           <select id="path-select" aria-label="Path">
-            <option value="h1" selected>Disruption slope (Hypothesis 1)</option>
-            <option value="lone">2024 loneliness</option>
-            <option value="over">Digital overwhelm (Hypothesis 3)</option>
-            <option value="h2">Telework interaction (Hypothesis 2)</option>
+            <option value="lone" selected>2024 loneliness</option>
+            <option value="over">2024 digital overwhelm</option>
+            <option value="level">2020 life-satisfaction level</option>
           </select>
-          <p class="control-note" id="path-note">Trait regression of the 2020–2022 life-satisfaction slope. Primary unweighted piecewise model.</p>
+          <p class="control-note" id="path-note">Largest association in the study. Reported as estimated; it was not a stated prediction.</p>
         </fieldset>
       </div>
       <div class="results">
         <div class="stat">
-          <span class="stat-value" id="path-value">−0.10</span>
-          <span class="stat-label" id="path-label">Coefficient on the disruption slope</span>
-          <span class="stat-sub" id="path-sub"><em>p</em> = .746, 95% CI [−0.71, 0.51], β = −.02. Implied window change −6.02 vs. −6.42 points at ±1 <em>SD</em>.</span>
+          <span class="stat-value held" id="path-value">−.36</span>
+          <span class="stat-label" id="path-label">Zero-order <em>r</em>, 2018 trait with 2024 loneliness</span>
+          <span class="stat-sub" id="path-sub">Person-level <em>b</em> = −0.19, 95% CI [−0.24, −0.14], <em>n</em> = 819. Full-sample self-critical β = −.30. Out-of-fold Δ<em>R</em>² = .036.</span>
         </div>
-        <div class="kicker-bar muted" id="path-bar">
-          <p class="kicker-main" id="path-verdict">Hypothesis 1 was not supported.</p>
-          <p class="kicker-sub" id="path-bf"><em>BF</em><sub>01</sub> = 51.52 for the model without this path.</p>
+        <div class="note-line">
+          <p id="path-verdict">The 2018 score marked later loneliness.</p>
+          <p class="note-sub" id="path-bf">Out-of-fold Δ<em>R</em>² = .036 beyond baseline covariates.</p>
         </div>
       </div>
     </div>
   </section>
 
   <section aria-labelledby="fig2">
-    <h2 class="section-label" id="fig2">3 · The picture</h2>
-    <figure class="paper-figure">
-      <img src="assets/fig2_ls_trajectories.png" alt="Two-panel figure. Panel A: three nearly parallel life-satisfaction paths from 2014 to 2025, dropping together through 2020–2022. Panel B: trait coefficients on the 2020 level and three slopes; only the 2020 level is clearly away from zero." width="1200" height="620">
-      <figcaption><strong>Figure 2 from the paper.</strong> Panel A shows implied life-satisfaction trajectories at high, average, and low trait self-compassion. The decline through the disruption is shared. Panel B is the trait coefficients: higher 2020 level (<em>b</em> = 2.16), no reliable association with the disruption slope.</figcaption>
+    <h2 class="section-label" id="fig2">The picture</h2>
+    <p class="section-intro">Life satisfaction fell 6.22 points. High and low on the trait fell together. The 95% intervals on the 2020–2021 change overlap.</p>
+    <figure class="drawn">
+      <svg width="992" height="268" viewBox="0 0 992 268" role="img" aria-label="Life satisfaction from 2018 to 2024 at plus one SD, the mean, and minus one SD of the 2018 trait. The three paths drop together through 2020 to 2022.">
+        <rect x="390" y="22" width="292" height="188" fill="#1c1917" opacity="0.045"/>
+        <text x="536" y="40" text-anchor="middle" font-size="12" fill="#57534e">2020–2022</text>
+        <text x="96" y="68" text-anchor="end" font-size="12" fill="#1c1917">+1 SD</text>
+        <text x="96" y="100" text-anchor="end" font-size="12" fill="#8a8f94">mean</text>
+        <text x="96" y="128" text-anchor="end" font-size="12" fill="#8a8f94">−1 SD</text>
+        <path d="M108 72 L390 61 L682 148 L948 133" fill="none" stroke="#1c1917" stroke-width="1.7"/>
+        <path d="M108 96 L390 88 L682 178 L948 155" fill="none" stroke="#8a8f94" stroke-width="1.5"/>
+        <path d="M108 124 L390 126 L682 206 L948 174" fill="none" stroke="#8a8f94" stroke-width="1.5"/>
+        <line x1="108" x2="948" y1="220" y2="220" stroke="#c9c4bc" stroke-width="1"/>
+        <text x="108" y="240" text-anchor="middle" font-size="13" fill="#57534e">2018</text>
+        <text x="390" y="240" text-anchor="middle" font-size="13" fill="#57534e">2020</text>
+        <text x="682" y="240" text-anchor="middle" font-size="13" fill="#57534e">2022</text>
+        <text x="948" y="240" text-anchor="middle" font-size="13" fill="#57534e">2024</text>
+        <text x="108" y="16" font-size="12" fill="#57534e">Life satisfaction, 0–100</text>
+      </svg>
+      <svg width="992" height="86" viewBox="0 0 992 86" role="img" aria-label="Implied 2020 to 2021 change with 95 percent intervals at minus and plus one SD. The intervals overlap.">
+        <text x="0" y="16" font-size="12" fill="#57534e">Implied change, 2020–2021 (points)</text>
+        <text x="0" y="46" font-size="13" fill="#57534e">−1 SD</text>
+        <line x1="258" x2="672" y1="42" y2="42" stroke="#8a8f94" stroke-width="1.6"/>
+        <circle cx="465" cy="42" r="4.2" fill="#8a8f94"/>
+        <text x="688" y="46" font-size="13" fill="#1c1917">−6.02 [−7.50, −4.54]</text>
+        <text x="0" y="74" font-size="13" fill="#57534e">+1 SD</text>
+        <line x1="175" x2="642" y1="70" y2="70" stroke="#1c1917" stroke-width="1.6"/>
+        <circle cx="409" cy="70" r="4.2" fill="#1c1917"/>
+        <text x="688" y="74" font-size="13" fill="#1c1917">−6.42 [−8.09, −4.76]</text>
+      </svg>
+      <figcaption>Model-implied means at ±1 <em>SD</em> of the 2018 score, other covariates at their means. The paper’s Figure 2 Panel B reports the trait coefficients on those slopes.</figcaption>
     </figure>
+    <p class="doc-box">Documentation. Implied means from the primary unweighted piecewise model in Monnot (2026), Table 3 / <code>growth_focal.csv</code>. The graphic was specified after the estimates were locked. Observational. Nothing here is an effect of changing the trait.</p>
   </section>
 
   <section aria-labelledby="found">
-    <h2 class="section-label" id="found">4 · What the study found, in order</h2>
+    <h2 class="section-label" id="found">What the 2018 score marked</h2>
     <ul class="plain-list">
-      <li><strong>Levels, not slopes.</strong> The 2018 trait was associated with higher life satisfaction at the 2020 knot (<em>b</em> = 2.16, β = .14) and with a more positive pre-2020 slope. It was not associated with the disruption slope or the recovery slope. That is the Yap–Anusic pattern — a trait marks who is better off, not who is hurt less by an event — extended from the Big Five and personal events to a narrower self-regulatory resource and a population-wide disruption.</li>
-      <li><strong>The largest association was not hypothesized.</strong> 2018 self-compassion correlated <em>r</em> = −.36 with 2024 loneliness and added Δ<em>R</em>² = .036 out of fold beyond baseline covariates. 2020 loneliness, measured in the disruption, was unrelated.</li>
-      <li><strong>Digital overwhelm, not digital behavior.</strong> The trait was associated with feeling less overwhelmed by digital technology in 2024 (β = −.20) and with slightly more favorable appraisals (β = .10). It was unrelated to recently familiarizing oneself with a new tool and to a national job-loss belief.</li>
-      <li><strong>The total score was the self-critical items.</strong> The trait factor correlated <em>r</em> = .98 with the reverse-scored self-critical composite and <em>r</em> = .38 with the self-caring composite. In full-sample models the self-critical items carried loneliness (β = −.30) and overwhelm (β = −.21); the self-caring items added nothing unique. A six-item neuroticism control reduced those estimates to −.24 and −.17 and did not remove them.</li>
-      <li><strong>The same associations inside and outside care work.</strong> Among 2,843 panelists with a valid industry branch, the loneliness and overwhelm slopes were the same in care sectors and elsewhere. Most published self-compassion work is in caring professions. These two associations were not.</li>
+      <li><strong>Who was better off at the 2020 knot.</strong> The trait was associated with higher life satisfaction then (<em>b</em> = 2.16, β = .14) and with a more positive pre-2020 slope. That is the Yap–Anusic pattern: a trait marks the level people sit at.</li>
+      <li><strong>2024 loneliness.</strong> The 2018 composite correlated <em>r</em> = −.36 with loneliness six years later and added Δ<em>R</em>² = .036 out of fold beyond baseline covariates. This path was not a stated prediction.</li>
+      <li><strong>Digital overwhelm.</strong> The trait was associated with feeling less overwhelmed by digital technology in 2024 (β = −.20) and with slightly more favorable appraisals (β = .10).</li>
+      <li><strong>The self-critical items.</strong> The trait factor correlated <em>r</em> = .98 with the reverse-scored self-critical composite. Those items carried loneliness (β = −.30) and overwhelm (β = −.21). A six-item neuroticism control left β = −.24 and −.17.</li>
+      <li><strong>The same associations inside and outside care work.</strong> Among 2,843 panelists with a valid industry branch, the loneliness and overwhelm slopes matched in care sectors and elsewhere.</li>
     </ul>
   </section>
 
