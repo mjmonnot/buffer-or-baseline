@@ -285,6 +285,33 @@ section { padding: 4.5rem 0 0; }
   font-size: 1rem;
 }
 
+.numbers .number-label {
+  margin-top: 0;
+  font-family: var(--display);
+  font-variation-settings: "opsz" 36, "SOFT" 60;
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.3vw, 1.95rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.numbers .number-label b { font-weight: 600; }
+.numbers .number-label.held b { color: var(--navy); }
+
+.small-stat {
+  display: block;
+  margin-top: 0.7rem;
+  font-family: var(--ui);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+  color: var(--ink-2);
+}
+
+.small-stat.held { color: var(--navy); }
+
 .number-sub {
   display: block;
   margin-top: 0.3rem;
@@ -293,6 +320,8 @@ section { padding: 4.5rem 0 0; }
   max-width: 26em;
   line-height: 1.5;
 }
+
+.numbers .number-sub { margin-top: 0.45rem; }
 
 /* ---------- icon arrays ---------- */
 
