@@ -294,6 +294,54 @@ section { padding: 4.5rem 0 0; }
   line-height: 1.5;
 }
 
+/* ---------- icon arrays ---------- */
+
+.arrays {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem 4rem;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--ink);
+  max-width: 820px;
+}
+
+@media (max-width: 640px) { .arrays { grid-template-columns: 1fr; } }
+
+.icon-figure { margin: 0; }
+
+.icon-array svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 340px;
+}
+
+.icon-figure figcaption {
+  margin-top: 0.9rem;
+  font-size: 1rem;
+  line-height: 1.45;
+  border: 0;
+  padding: 0;
+  color: var(--ink);
+}
+
+.icon-figure .count {
+  font-family: var(--display);
+  font-variation-settings: "opsz" 72, "SOFT" 100;
+  font-weight: 300;
+  font-size: 2.6rem;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-right: 0.15em;
+  vertical-align: -0.08em;
+}
+
+.icon-figure .count.held { color: var(--navy); }
+
+.icon-figure .who { color: var(--muted); font-size: 0.9rem; }
+
+.shift { margin-bottom: 2.4rem; }
+
 /* ---------- timeline ---------- */
 
 .timeline {

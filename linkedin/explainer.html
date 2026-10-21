@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1080">
+  <title>Buffer or Baseline? Trait Self-Compassion and Employee Well-Being Across Disruption, Telework, and Digital Demands in a National Probability Panel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,650;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f2e9;
+      --ink: #1c1917;
+      --muted: #5c564e;
+      --hair: #d0c9be;
+      --navy: #1e3a5f;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #ddd8ce;
+      color: var(--ink);
+    }
+    .page {
+      width: 1080px;
+      height: 1350px;
+      padding: 34px 52px 30px;
+      background: var(--paper);
+      display: flex;
+      flex-direction: column;
+      gap: 19px;
+      font-family: "Source Sans 3", Calibri, sans-serif;
+      transform-origin: top left;
+    }
+    .news {
+      font-size: 15px;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+    .news b { color: var(--ink); font-weight: 650; }
+    h1 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 50px;
+      font-weight: 600;
+      line-height: 1.02;
+      letter-spacing: -0.028em;
+      margin: 10px 0 6px;
+    }
+    .full-title {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 19px;
+      line-height: 1.35;
+      margin: 0 0 8px;
+    }
+    .kicker {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .dek {
+      font-size: 19px;
+      line-height: 1.4;
+    }
+    .story {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      padding: 12px 0 2px;
+      border-top: 1px solid var(--ink);
+      border-bottom: 1px solid var(--hair);
+    }
+    .story h3 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .story p {
+      font-size: 16px;
+      line-height: 1.35;
+      color: var(--ink);
+    }
+    .story .held p { color: var(--navy); font-weight: 650; }
+    .label {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 6px;
+    }
+    .hero-cap {
+      font-size: 17px;
+      line-height: 1.35;
+      margin: 0 0 8px;
+      max-width: 46em;
+    }
+    svg { display: block; }
+    .verdicts {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 28px;
+    }
+    .verdicts h3 {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 6px;
+    }
+    .verdicts .held h3 { color: var(--navy); }
+    .verdicts p {
+      font-size: 16px;
+      line-height: 1.35;
+      color: var(--muted);
+    }
+    .verdicts p b { color: var(--ink); font-weight: 650; }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+    .split h3 {
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 4px;
+    }
+    .split .num {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 34px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+    .split .held .num { color: var(--navy); }
+    .split p {
+      font-size: 16px;
+      line-height: 1.35;
+      color: var(--muted);
+      margin-top: 4px;
+    }
+    .plain {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      padding-top: 12px;
+      border-top: 1px solid var(--ink);
+    }
+    .plain-head {
+      font-size: 16px;
+      line-height: 1.35;
+      margin-bottom: 8px;
+    }
+    .plain-head b { font-weight: 700; }
+    .plain .arrays {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .plain figure { margin: 0; }
+    .icon-array svg { width: 100%; max-width: 150px; height: auto; display: block; }
+    .plain figcaption {
+      font-size: 14px;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .plain figcaption b {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-right: 2px;
+    }
+    .plain figcaption b.held { color: var(--navy); }
+    .plain-note {
+      font-size: 13px;
+      line-height: 1.4;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+    .cite {
+      padding-top: 12px;
+      border-top: 1px solid var(--ink);
+    }
+    .cite .paper { font-size: 14px; line-height: 1.4; }
+    .cite .doc { font-size: 13px; color: var(--muted); line-height: 1.4; margin-top: 5px; }
+  </style>
+</head>
+<body>
+<div class="page">
+  <header>
+    <p class="news">Destatis, 22 April 2026: <b>25%</b> of German employees still worked from home in 2025, against 13% in 2019. This year’s isolation and return-to-office studies disagree on location. They do not show that the office, by itself, fixes loneliness.</p>
+    <h1>Buffer or Baseline?</h1>
+    <p class="full-title">Trait Self-Compassion and Employee Well-Being Across Disruption, Telework, and Digital Demands in a National Probability Panel</p>
+    <p class="kicker">GESIS Panel.pop · employed in 2018 · N = 3,052</p>
+    <p class="dek">A 2018 self-compassion score set where people stood. People a standard deviation higher entered 2020 with life satisfaction about 3% higher, and six years later they were less lonely and less overwhelmed by digital tools. Through the 2020–2021 drop, life satisfaction fell about 9% at every level of the trait, and through the telework years everyone moved at the same rate. The trait marked the level, and the level is what lasted.</p>
+  </header>
+
+  <div class="story" aria-label="The study in four beats">
+    <div>
+      <h3>2018</h3>
+      <p>Self-compassion measured before COVID-19. The resource is already in hand.</p>
+    </div>
+    <div>
+      <h3>2020–2021</h3>
+      <p>Life satisfaction fell about 9% of its 2020 level. High and low on the trait each lost 9%, and the high group stayed about 6% above the low group.</p>
+    </div>
+    <div>
+      <h3>2021–2025</h3>
+      <p>Telework share moved with life satisfaction the same way at every level of the trait.</p>
+    </div>
+    <div class="held">
+      <h3>2024</h3>
+      <p>The 2018 score was associated with loneliness six years on — the largest mark in the study.</p>
+    </div>
+  </div>
+
+  <section>
+    <p class="label">The picture</p>
+    <p class="hero-cap">Implied life satisfaction (0–100) at ±1 <i>SD</i> of the 2018 score. Each <i>SD</i> of the trait added 3% to the 2020 level (<i>b</i> = 2.16). The drop that followed was 9% at both ends (<i>b</i> for the slope = −0.10, <i>BF</i><sub>01</sub> = 51.52).</p>
+    <svg width="976" height="268" viewBox="0 0 976 268" role="img" aria-label="Three nearly parallel life-satisfaction paths from 2018 to 2025. All drop through 2020 to 2022.">
+      <rect x="292" y="8" width="248" height="208" fill="#1c1917" opacity="0.045"/>
+      <line x1="100" x2="820" y1="48" y2="48" stroke="#e6e0d6" stroke-width="1"/>
+      <line x1="100" x2="820" y1="164" y2="164" stroke="#e6e0d6" stroke-width="1"/>
+      <line x1="100" x2="820" y1="236" y2="236" stroke="#e6e0d6" stroke-width="1"/>
+      <text x="90" y="52" text-anchor="end" font-family="Source Sans 3, Calibri, sans-serif" font-size="12" fill="#5c564e">72</text>
+      <text x="90" y="168" text-anchor="end" font-family="Source Sans 3, Calibri, sans-serif" font-size="12" fill="#5c564e">66</text>
+      <text x="90" y="240" text-anchor="end" font-family="Source Sans 3, Calibri, sans-serif" font-size="12" fill="#5c564e">62</text>
+      <text x="416" y="26" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="12" fill="#5c564e">disruption</text>
+      <!-- y = 28 + (73-est)*(208/11); x 100 / 292 / 540 / 820 -->
+      <path d="M100 68 L292 44 L540 162 L820 136" fill="none" stroke="#1c1917" stroke-width="2"/>
+      <path d="M100 98 L292 87 L540 200 L820 155" fill="none" stroke="#8a847a" stroke-width="1.6"/>
+      <path d="M100 130 L292 125 L540 236 L820 177" fill="none" stroke="#8a847a" stroke-width="1.6"/>
+      <circle cx="292" cy="44" r="3" fill="#1c1917"/>
+      <circle cx="540" cy="162" r="3" fill="#1c1917"/>
+      <text x="304" y="38" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#1c1917">72.2</text>
+      <text x="416" y="92" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#1c1917">same 9% drop</text>
+      <text x="552" y="156" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#1c1917">65.9</text>
+      <text x="832" y="140" font-family="Source Sans 3, Calibri, sans-serif" font-size="14" fill="#1c1917">+1 SD</text>
+      <text x="832" y="159" font-family="Source Sans 3, Calibri, sans-serif" font-size="14" fill="#5c564e">mean</text>
+      <text x="832" y="181" font-family="Source Sans 3, Calibri, sans-serif" font-size="14" fill="#5c564e">−1 SD</text>
+      <line x1="100" x2="820" y1="248" y2="248" stroke="#d0c9be" stroke-width="1"/>
+      <text x="100" y="265" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#5c564e">2018</text>
+      <text x="292" y="265" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#5c564e">2020</text>
+      <text x="540" y="265" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#5c564e">2022</text>
+      <text x="820" y="265" text-anchor="middle" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#5c564e">2025</text>
+    </svg>
+    <svg width="976" height="64" viewBox="0 0 976 64" role="img" aria-label="Implied 2020 to 2021 change. The 95 percent intervals overlap.">
+      <text x="0" y="14" font-family="Source Sans 3, Calibri, sans-serif" font-size="12" fill="#5c564e">Implied change, 2020–2021</text>
+      <text x="0" y="36" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#5c564e">−1 SD</text>
+      <line x1="220" x2="560" y1="32" y2="32" stroke="#8a847a" stroke-width="1.6"/>
+      <circle cx="390" cy="32" r="3.6" fill="#8a847a"/>
+      <text x="572" y="36" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#1c1917">−6.02 [−7.50, −4.54] · −9%</text>
+      <text x="0" y="58" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#5c564e">+1 SD</text>
+      <line x1="160" x2="538" y1="54" y2="54" stroke="#1c1917" stroke-width="1.6"/>
+      <circle cx="350" cy="54" r="3.6" fill="#1c1917"/>
+      <text x="550" y="58" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#1c1917">−6.42 [−8.09, −4.76] · −9%</text>
+    </svg>
+  </section>
+
+  <div class="plain">
+    <div>
+      <p class="label">In plain terms · <i>r</i> = −.36</p>
+      <p class="plain-head">Of 100 employees in the upper half on 2018 self-compassion, <b>68</b> were in the less-lonely half six years later. Of 100 in the lower half, <b>32</b> were.</p>
+      <div class="arrays">
+        <figure>
+          <div class="icon-array" data-filled="68"></div>
+          <figcaption><b class="held">68</b> of 100 · upper half</figcaption>
+        </figure>
+        <figure>
+          <div class="icon-array" data-filled="32"></div>
+          <figcaption><b>32</b> of 100 · lower half</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div>
+      <p class="label">Three numbers, one scale</p>
+      <p class="plain-head">One <i>SD</i> higher on the 2018 score, and the 2024 outcome is expected this much lower.</p>
+      <svg width="440" height="150" viewBox="0 0 440 150" style="margin-top:6px" role="img" aria-label="Expected shift per SD of the 2018 score: loneliness 0.36 SD lower; loneliness via self-critical items 0.30 SD lower; digital overwhelm 0.20 SD lower.">
+        <line x1="40" x2="40" y1="6" y2="124" stroke="#1c1917" stroke-width="1"/>
+        <line x1="40" x2="430" y1="124" y2="124" stroke="#d0c9be" stroke-width="1"/>
+        <g font-family="Source Sans 3, Calibri, sans-serif" font-size="11" fill="#5c564e">
+          <text x="40" y="140" text-anchor="middle">0</text>
+          <text x="235" y="140" text-anchor="middle">−0.2</text>
+          <text x="430" y="140" text-anchor="end">−0.4 SD</text>
+        </g>
+        <!-- x = 40 + sd*975 -->
+        <text x="40" y="18" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#1c1917" font-weight="650">2024 loneliness</text>
+        <line x1="40" x2="391" y1="34" y2="34" stroke="#1e3a5f" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="391" cy="34" r="6.5" fill="#1e3a5f"/>
+        <text x="403" y="38" font-family="Source Sans 3, Calibri, sans-serif" font-size="12" fill="#1e3a5f" font-weight="650">−.36</text>
+
+        <text x="40" y="60" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#1c1917" font-weight="650">Loneliness, self-critical items</text>
+        <line x1="40" x2="332" y1="76" y2="76" stroke="#1c1917" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="332" cy="76" r="6.5" fill="#1c1917"/>
+        <text x="345" y="80" font-family="Source Sans 3, Calibri, sans-serif" font-size="12" fill="#1c1917">β = −.30</text>
+
+        <text x="40" y="102" font-family="Source Sans 3, Calibri, sans-serif" font-size="13" fill="#1c1917" font-weight="650">2024 digital overwhelm</text>
+        <line x1="40" x2="235" y1="118" y2="118" stroke="#1c1917" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="235" cy="118" r="6.5" fill="#1c1917"/>
+        <text x="248" y="122" font-family="Source Sans 3, Calibri, sans-serif" font-size="12" fill="#1c1917">β = −.20</text>
+      </svg>
+      <p class="plain-note">Self-caring items, entered alongside: β = +.01. After a six-item neuroticism control the self-critical estimates were −.24 and −.17.</p>
+    </div>
+  </div>
+
+  <div class="cite">
+    <p class="paper"><b>Monnot, M. J. (2026).</b> Buffer or Baseline? Trait Self-Compassion and Employee Well-Being Across Disruption, Telework, and Digital Demands in a National Probability Panel. <i>SSRN</i>. doi.org/10.2139/ssrn.7622018</p>
+    <p class="doc">Documentation. Observational panel. The 68/32 split is the binomial effect size display of <i>r</i> = −.36 (Rosenthal &amp; Rubin, 1982), a translation, not a new estimate; the model used full scores. Destatis PD26_N024. The 2024 items name digital technologies, not artificial intelligence. mjmonnot.github.io/buffer-or-baseline</p>
+  </div>
+</div>
+<script>
+(function iconArrays() {
+  var NS = "http://www.w3.org/2000/svg";
+  var nodes = document.querySelectorAll(".icon-array");
+  for (var n = 0; n < nodes.length; n += 1) {
+    var el = nodes[n];
+    var filled = parseInt(el.getAttribute("data-filled"), 10) || 0;
+    var svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", "0 0 200 200");
+    for (var i = 0; i < 100; i += 1) {
+      var c = document.createElementNS(NS, "circle");
+      c.setAttribute("cx", String(10 + (i % 10) * 20));
+      c.setAttribute("cy", String(10 + Math.floor(i / 10) * 20));
+      c.setAttribute("r", "7");
+      if (i < filled) {
+        c.setAttribute("fill", "#1e3a5f");
+      } else {
+        c.setAttribute("fill", "none");
+        c.setAttribute("stroke", "#b9b1a4");
+        c.setAttribute("stroke-width", "1.4");
+      }
+      svg.appendChild(c);
+    }
+    el.appendChild(svg);
+  }
+})();
+(function () {
+  if (/[?&]export=1/.test(location.search)) return;
+  function fit() {
+    var page = document.querySelector(".page");
+    if (!page) return;
+    page.style.zoom = String(Math.min(1, document.documentElement.clientWidth / 1080, document.documentElement.clientHeight / 1350));
+  }
+  fit();
+  addEventListener("resize", fit);
+})();
+</script>
+</body>
+</html>

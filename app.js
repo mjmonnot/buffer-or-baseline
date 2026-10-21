@@ -46,6 +46,34 @@ if (select) {
   select.addEventListener("change", () => show(select.value));
 }
 
+// Icon arrays: 10 x 10 dots, `data-filled` of them in navy, drawn as SVG.
+(function iconArrays() {
+  const NS = "http://www.w3.org/2000/svg";
+  document.querySelectorAll(".icon-array").forEach((el) => {
+    const filled = Math.max(0, Math.min(100, parseInt(el.dataset.filled, 10) || 0));
+    const svg = document.createElementNS(NS, "svg");
+    svg.setAttribute("viewBox", "0 0 200 200");
+    svg.setAttribute("aria-hidden", "true");
+    for (let i = 0; i < 100; i += 1) {
+      const row = Math.floor(i / 10);
+      const col = i % 10;
+      const c = document.createElementNS(NS, "circle");
+      c.setAttribute("cx", String(10 + col * 20));
+      c.setAttribute("cy", String(10 + row * 20));
+      c.setAttribute("r", "7");
+      if (i < filled) {
+        c.setAttribute("fill", "#1f3a5f");
+      } else {
+        c.setAttribute("fill", "none");
+        c.setAttribute("stroke", "#b9afa0");
+        c.setAttribute("stroke-width", "1.4");
+      }
+      svg.appendChild(c);
+    }
+    el.appendChild(svg);
+  });
+})();
+
 // Reveal on scroll. Falls back to visible when IntersectionObserver is absent
 // or when the user prefers reduced motion.
 (function reveal() {
