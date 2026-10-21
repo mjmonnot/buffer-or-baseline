@@ -45,3 +45,26 @@ function show(key) {
 if (select) {
   select.addEventListener("change", () => show(select.value));
 }
+
+// Reveal on scroll. Falls back to visible when IntersectionObserver is absent
+// or when the user prefers reduced motion.
+(function reveal() {
+  const items = document.querySelectorAll(".reveal");
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!("IntersectionObserver" in window) || reduce) {
+    items.forEach((el) => el.classList.add("in"));
+    return;
+  }
+  const io = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("in");
+          io.unobserve(entry.target);
+        }
+      });
+    },
+    { rootMargin: "0px 0px -8% 0px", threshold: 0.15 }
+  );
+  items.forEach((el) => io.observe(el));
+})();
