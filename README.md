@@ -4,7 +4,9 @@ Companion site for:
 
 Monnot, M. J. (2026). Buffer or baseline? Trait self-compassion and employee well-being across disruption, telework, and digital demands in a national probability panel. *SSRN*. https://doi.org/10.2139/ssrn.7622018
 
-Live: https://mjmonnot.github.io/buffer-or-baseline/
+- DOI: https://doi.org/10.2139/ssrn.7622018
+- PDF: https://mjmonnot.github.io/assets/pdfs/Monnot_2026_Buffer_or_Baseline_SelfCompassion_SSRN_7622018.pdf
+- Live: https://mjmonnot.github.io/buffer-or-baseline/
 
 No respondent-level data. Every number is a published aggregate from the preprint.
 
