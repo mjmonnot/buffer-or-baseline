@@ -155,8 +155,7 @@
 <section id="evidence" aria-labelledby="s1">
   <p class="section-label" id="s1">1 &middot; Life satisfaction fell by about the same amount at every level of self-compassion</p>
   <p class="section-intro">The paper fitted one growth curve to yearly life satisfaction, on a 0 to 100 scale. The curve has a segment for the 2020 to 2021 disruption between a segment before 2020 and a recovery segment from 2022. The paper then asked whether self-compassion measured before the pandemic went with the height of the curve or with the size of the fall. Pick a view.</p>
-  <div id="guess"></div>
-  <div id="ls-wrap" class="guess-target">
+  <div id="ls-wrap">
   <div class="calc">
     <div class="controls">
       <div class="seg" role="group" aria-label="Choose a view of the life-satisfaction results" id="ls-seg">
@@ -442,7 +441,7 @@
       main: "Self-compassion went with the height of the curve.", barsub: "Red dots are significant (<em>p</em> &lt; .05); open grey dots are not.", muted: false }
   };
   var lsSvg = document.getElementById("ls-chart");
-  var lsView = "drop", lsGuess = null;
+  var lsView = "drop";
   var INK = "#22303c", MID = "#7a8794", LBL = "#5b6570", SRED = "#c0392b";
   var LSCAP = {
     drop: "Levels are computed here from published values: 70.05 points at the start of 2020 at average self-compassion, 2.16 points more per SD, and the implied change at each level (Table 3 and page 29 of the preprint, <em>N</em> = 3,052). The 95% intervals for the three changes are [&minus;7.50, &minus;4.54] at 1 SD below average, [&minus;7.22, &minus;5.22] at average and [&minus;8.09, &minus;4.76] at 1 SD above. The chart shows only the range from 60 to 74 points of the 0 to 100 scale.",
@@ -482,27 +481,6 @@
     });
     txt(lsSvg, 10, 270, "about the same drop at every level");
     rects.push([8, 256, 262, 274]);
-    if (lsGuess != null) {
-      var yg = y(lines[2].s - lsGuess);
-      lsSvg.appendChild(el("line", { x1: XL, y1: y(lines[2].s), x2: XR, y2: yg, stroke: SRED, "stroke-width": 1, "stroke-dasharray": "3 3" }));
-      lsSvg.appendChild(el("circle", { cx: XR, cy: yg, r: 8, fill: "none", stroke: SRED, "stroke-width": 2 }));
-      for (var q = 0; q <= 1; q += 0.04) obst.push([XL + (XR - XL) * q, y(lines[2].s) + (yg - y(lines[2].s)) * q]);
-      var W = 7.4 * 10 + 4, hit = function (x0, yb) {
-        var r = [x0, yb - 13, x0 + W, yb + 4];
-        if (r[1] < 40 || r[3] > 252) return true;
-        for (var a = 0; a < rects.length; a++) { var b = rects[a]; if (r[0] < b[2] + 2 && r[2] > b[0] - 2 && r[1] < b[3] + 2 && r[3] > b[1] - 2) return true; }
-        for (var k = 0; k < obst.length; k++) { var p = obst[k]; if (p[0] > r[0] - 3 && p[0] < r[2] + 3 && p[1] > r[1] - 4 && p[1] < r[3] + 4) return true; }
-        return false;
-      };
-      var pos = null, dys = [0, -4, 4, -8, 8, -12, 12, -16, 16, -20, 20, -24, 24];
-      for (var m = 0; m < dys.length && !pos; m++) {
-        var yb = yg + 5 + dys[m];
-        if (!hit(XR + 14, yb)) pos = { x: XR + 14, y: yb, a: "start" };
-        else if (!hit(XR - 14 - W, yb)) pos = { x: XR - 14, y: yb, a: "end" };
-      }
-      if (!pos) pos = { x: XR + 14, y: yg + 5, a: "start" };
-      txt(lsSvg, pos.x, pos.y, "your guess", { a: pos.a, f: SRED, w: 700 });
-    }
   }
   function drawLs(k) {
     var d = LS[k]; clear(lsSvg); lsView = k;
@@ -522,20 +500,6 @@
   }
   seg("ls-seg", drawLs);
   drawLs("drop");
-  Companion.guess(document.getElementById("guess"), {
-    question: "Before you look: employees 1 SD below average in self-compassion lost an implied 6.02 points of life satisfaction, on a 0 to 100 scale, across 2020 and 2021. How many points did employees 1 SD above average lose?",
-    min: 0, max: 12, step: 0.1, start: 6,
-    format: function (v) { return v.toFixed(1) + " points"; },
-    reveal: document.getElementById("ls-wrap"),
-    feedback: function (v) {
-      var g = v.toFixed(1), d = v - 6.42;
-      lsGuess = v; drawLs(lsView);
-      if (Math.abs(d) <= 0.5) return "You guessed <strong>" + g + "</strong> points. The paper&rsquo;s estimate is <strong>6.42</strong>, so you were close. That is about the same as the 6.02 points for employees lower in self-compassion.";
-      if (d < 0) return "You guessed <strong>" + g + "</strong> points. The paper&rsquo;s estimate is <strong>6.42</strong>, about the same as the 6.02 points for employees lower in self-compassion. The difference between the two was not statistically significant.";
-      return "You guessed <strong>" + g + "</strong> points. The paper&rsquo;s estimate is <strong>6.42</strong>, about the same as the 6.02 points for employees lower in self-compassion.";
-    }
-  });
-
   /* 2 . Table 4: telework simple slopes and interaction. */
   var TWR = [["1 SD below average", 0.10, [-1.39, 1.59], "0.10"], ["Average", -0.85, [-1.91, 0.20], "\u22120.85"], ["1 SD above average", -1.81, [-3.31, -0.31], "\u22121.81"]];
   var TW = {
