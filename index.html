@@ -3,296 +3,723 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Buffer or baseline? Self-compassion in a national probability panel</title>
-  <meta name="description" content="Self-compassion measured in 2018 marked lower loneliness and less digital overwhelm in 2024, carried by the self-critical items. Companion to Monnot (2026), SSRN.">
-  <link rel="canonical" href="https://mjmonnot.github.io/buffer-or-baseline/">
-  <meta property="og:title" content="Buffer or baseline? Self-compassion in a national probability panel">
-  <meta property="og:description" content="Self-compassion measured in 2018 marked who was less lonely and less overwhelmed in 2024. N = 3,052 employed adults in the GESIS Panel.pop.">
+  <title>German employees with more self-compassion in 2018 saw their life satisfaction fall about as much as employees with less during the COVID-19 disruption | Matthew J. Monnot</title>
+  <meta name="description" content="In a German national panel, employees with more self-compassion in 2018 saw their life satisfaction fall about as much as employees with less during the COVID-19 disruption. In 2024, they reported less loneliness and less digital overwhelm than employees with less self-compassion. Research companion to the preprint.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mjmonnot.github.io/buffer-or-baseline/">
-  <meta property="og:image" content="https://mjmonnot.github.io/buffer-or-baseline/linkedin/explainer.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-  <script>document.documentElement.classList.add("js");</script>
+  <meta property="og:title" content="German employees with more self-compassion in 2018 saw their life satisfaction fall about as much as employees with less during the COVID-19 disruption">
+  <meta property="og:description" content="GESIS Panel, 3,052 adults employed in 2018. Life satisfaction fell 6.22 points on a 0 to 100 scale from 2020 to 2021, about equally at higher and lower self-compassion. In 2024, more self-compassion went with less loneliness and less digital overwhelm.">
+  <meta property="og:image" content="https://mjmonnot.github.io/buffer-or-baseline/assets/figure2-life-satisfaction.png">
+  <meta property="og:site_name" content="Matthew J. Monnot">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="assets/companion.css">
+  <style>#ls-chart text, #tw-chart text, #tc-chart text, #cp-chart text { font-size: 14px; } #ls-chart text.lbl, #tw-chart text.lbl, #tc-chart text.lbl, #cp-chart text.lbl { font-size: 14px; }
+  #ls-chart, #cp-multiples svg { border: none; background: none; overflow: visible; }
+  .calc-wide { grid-template-columns: 1fr; gap: 24px; }
+  .calc-wide .results { border-left: none; padding-left: 0; border-top: 1px solid var(--rule); padding-top: 18px; }
+  .multiples { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  @media (max-width: 640px) { .multiples { grid-template-columns: 1fr; } }
+  .chart .multiples svg { border: none; background: none; overflow: visible; }
+  .multiples .pan { transition: opacity 0.15s; }
+  .multiples .pan-hit { fill: transparent; cursor: pointer; }
+  .multiples .pan-hit:focus-visible { outline: 2px solid var(--blue); outline-offset: 2px; }
+    .paper-figure a.zoom { display: block; cursor: zoom-in; }
+    .paper-figure a.zoom:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+    .zoom-hint { font-size: 14px; color: var(--gray); margin: 6px 0 0; }
+    .lightbox { position: fixed; top: 0; right: 0; bottom: 0; left: 0; z-index: 1000; background: rgba(20, 26, 33, 0.94); display: flex; flex-direction: column; }
+    .lightbox[hidden] { display: none; }
+    .lightbox-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 10px 16px; color: #fff; font-size: 15px; }
+    .lightbox-bar button { font: inherit; color: #fff; background: none; border: 1px solid #fff; border-radius: 4px; padding: 6px 14px; cursor: pointer; }
+    .lightbox-bar button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+    .lightbox-buttons { white-space: nowrap; }
+    .lightbox-scroll { flex: 1; overflow: auto; padding: 0 16px 16px; }
+    .lightbox-scroll img { display: block; margin: 0 auto; max-width: none; height: auto; background: #fff; cursor: zoom-in; }
+    .lightbox-scroll img.large { cursor: zoom-out; }
+  </style>
 </head>
 <body>
-<nav class="site-nav" aria-label="Site">
-  <ul>
-    <li class="brand"><a href="index.html">Buffer or baseline?</a></li>
-    <li><a href="index.html" aria-current="page">Overview</a></li>
-    <li><a href="evidence.html">The evidence</a></li>
-    <li><a href="playbook.html">What to watch</a></li>
-    <li><a href="references.html">Key references</a></li>
-  </ul>
-</nav>
-
 <main>
-  <header class="hero wrap">
-    <div class="reveal">
-      <p class="kicker">GESIS Panel.pop · <em>N</em> = 3,052 employed adults · 2018 → 2024</p>
-      <h1>Self-compassion measured in 2018 marked who was less lonely and less overwhelmed in 2024.</h1>
-      <p class="dek">A Self-Compassion Scale score taken before the disruption, in a probability sample of German adults employed in 2018, was associated with lower loneliness (<em>r</em> = −.36) and less digital overwhelm (β = −.20) six years later, net of earlier well-being and technology affinity. The associations ran through the self-critical items and held after a neuroticism control.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="https://mjmonnot.github.io/assets/pdfs/Monnot_2026_Buffer_or_Baseline_SelfCompassion_SSRN_7622018.pdf">Download the preprint PDF</a>
-        <a class="btn ghost" href="https://doi.org/10.2139/ssrn.7622018">DOI / SSRN</a>
-        <a class="btn ghost" href="evidence.html">See the evidence</a>
-      </div>
-    </div>
 
-    <figure class="hero-figure reveal">
-      <svg class="draw" viewBox="0 0 560 330" role="img" aria-label="Life satisfaction from 2018 to 2024 at plus one SD, the mean, and minus one SD of the 2018 trait. The three paths stay apart and move together.">
-        <rect x="198" y="30" width="178" height="226" fill="#15110e" opacity="0.05" rx="3"/>
-        <text x="287" y="22" text-anchor="middle" font-size="11" fill="#6b625a" font-family="Inter, sans-serif" letter-spacing="1">2020–2022</text>
-        <text x="20" y="80" font-size="11" fill="#15110e" font-family="Inter, sans-serif" font-weight="600">+1 SD</text>
-        <text x="20" y="118" font-size="11" fill="#8a8f94" font-family="Inter, sans-serif">mean</text>
-        <text x="20" y="156" font-size="11" fill="#8a8f94" font-family="Inter, sans-serif">−1 SD</text>
-        <path class="trace" d="M64 76 L198 62 L376 170 L540 152" fill="none" stroke="#1f3a5f" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-        <path class="trace" d="M64 108 L198 98 L376 206 L540 176" fill="none" stroke="#8a8f94" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
-        <path class="trace" d="M64 144 L198 148 L376 244 L540 204" fill="none" stroke="#8a8f94" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
-        <line x1="64" x2="540" y1="272" y2="272" stroke="#b9afa0" stroke-width="1"/>
-        <g font-size="12" fill="#6b625a" font-family="Inter, sans-serif" text-anchor="middle">
-          <text x="64" y="294">2018</text>
-          <text x="198" y="294">2020</text>
-          <text x="376" y="294">2022</text>
-          <text x="540" y="294">2024</text>
-        </g>
-        <text x="64" y="318" font-size="11" fill="#6b625a" font-family="Inter, sans-serif">Life satisfaction, 0–100 · model-implied means</text>
-      </svg>
-      <figcaption>People higher on the 2018 score sat higher from 2018 through 2024. The 2020–2022 fall was shared: −6.02 points at −1 <em>SD</em>, −6.42 at +1 <em>SD</em>, intervals overlapping.</figcaption>
-    </figure>
-  </header>
+<p class="backlink"><a href="https://mjmonnot.github.io/publications/2026-buffer-or-baseline.html">&larr; Publication page</a> &nbsp;&middot;&nbsp; <a href="https://mjmonnot.github.io/">mjmonnot.github.io</a></p>
 
-  <section class="wrap" aria-labelledby="plain">
-    <h2 class="section-label" id="plain">In plain terms</h2>
-    <h2>Of 100 employees in the upper half on 2018 self-compassion, 68 were in the less-lonely half six years later.</h2>
-    <p class="section-intro">Split both measures at their midpoints. A correlation of −.36 means the halves line up 68 times in 100 for the upper group and 32 times in 100 for the lower group. Each dot is one of 100 employees.</p>
-    <div class="arrays reveal">
-      <figure class="icon-figure">
-        <div class="icon-array" data-filled="68" data-label="upper half on 2018 self-compassion" role="img" aria-label="100 dots, 68 filled: of 100 employees in the upper half on 2018 self-compassion, 68 were in the less-lonely half in 2024."></div>
-        <figcaption><span class="count held">68</span> of 100 in the less-lonely half<br><span class="who">Upper half on 2018 self-compassion</span></figcaption>
-      </figure>
-      <figure class="icon-figure">
-        <div class="icon-array" data-filled="32" data-label="lower half on 2018 self-compassion" role="img" aria-label="100 dots, 32 filled: of 100 employees in the lower half on 2018 self-compassion, 32 were in the less-lonely half in 2024."></div>
-        <figcaption><span class="count">32</span> of 100 in the less-lonely half<br><span class="who">Lower half on 2018 self-compassion</span></figcaption>
-      </figure>
-      <noscript><p class="section-intro">Upper half: 68 of 100 in the less-lonely half. Lower half: 32 of 100.</p></noscript>
-    </div>
-    <p class="doc-box">Translation of the zero-order <em>r</em> = −.36 by the binomial effect size display (Rosenthal &amp; Rubin, 1982): (0.5 ± <em>r</em>/2) × 100, which assumes bivariate normality. The study did not split anyone into halves; the model used the full scores. Shared variance is 13%. Most of what separates lonelier from less-lonely employees in 2024 is not this trait.</p>
-  </section>
+<header class="masthead">
+  <p class="kicker">Self-compassion, disruption and well-being at work in Germany &middot; Research companion</p>
+  <h1>German employees with more self-compassion in 2018 saw their life satisfaction fall about as much as employees with less during the COVID-19 disruption.</h1>
+  <p class="dek">A study of the GESIS Panel, a national probability panel of German adults. It follows 3,052 adults who were employed in 2018. The panel asked about life satisfaction every year from 2014 to 2025. Self-compassion is a way of relating to your own difficulties, with kindness and without harsh self-judgment. Every result is an association in survey data. Nothing was assigned or changed by the researcher.</p>
+  <div class="masthead-actions">
+    <a class="btn primary" href="https://mjmonnot.github.io/assets/pdfs/Monnot_2026_Buffer_or_Baseline_SelfCompassion_SSRN_7622018.pdf">Download the preprint PDF</a>
+    <a class="btn ghost" href="https://doi.org/10.2139/ssrn.7622018">DOI &middot; SSRN</a>
+  </div>
+  <nav class="audience-nav" aria-label="Jump to the part written for you">
+    <span class="lead">Start where it suits you:</span>
+    <a href="#plain">In plain words</a>
+    <a href="#practice">In practice</a>
+    <a href="#writers">For writers</a>
+    <a href="#evidence">The evidence</a>
+    <a href="#specialists">For specialists</a>
+  </nav>
+</header>
 
-  <section class="wrap" aria-labelledby="glance">
-    <h2 class="section-label" id="glance">Three numbers, one scale</h2>
-    <p class="section-intro">Each number is the same kind of statement: an employee one standard deviation higher on the 2018 score is expected to sit this much lower, in standard deviations, on the 2024 outcome.</p>
-    <figure class="drawn shift reveal">
-      <svg viewBox="0 0 992 170" role="img" aria-label="Expected shift in the 2024 outcome per one standard deviation higher on the 2018 score. Loneliness 0.36 SD lower; loneliness via self-critical items 0.30 SD lower; digital overwhelm 0.20 SD lower.">
-        <g font-family="Inter, sans-serif" font-size="12" fill="#6b625a">
-          <text x="312" y="160" text-anchor="middle">0</text>
-          <text x="492" y="160" text-anchor="middle">−0.1</text>
-          <text x="672" y="160" text-anchor="middle">−0.2</text>
-          <text x="852" y="160" text-anchor="middle">−0.3</text>
-          <text x="960" y="160" text-anchor="end">−0.4 SD</text>
-        </g>
-        <line x1="312" x2="960" y1="146" y2="146" stroke="#d8d0c3" stroke-width="1"/>
-        <line x1="312" x2="312" y1="14" y2="146" stroke="#15110e" stroke-width="1"/>
+<section id="plain" aria-labelledby="s-find">
+  <p class="section-label" id="s-find">Three findings</p>
+  <ol class="headlines" id="headlines">
+    <li>Life satisfaction fell 6.22 points on a 0 to 100 scale during the COVID-19 disruption, about equally for employees with more and less self-compassion.</li>
+    <li>Employees with more self-compassion in 2018 felt less overwhelmed by digital technology in 2024 than employees with less. They were also less lonely in 2024, a link the study had not set out to test.</li>
+    <li>Those 2024 links were carried by being less harsh on oneself. The self-caring items added nothing further. The links were smaller but still present after accounting for neuroticism, a general tendency toward negative emotion.</li>
+  </ol>
+</section>
 
-        <text x="0" y="40" font-family="Inter, sans-serif" font-size="14" fill="#15110e" font-weight="600">2024 loneliness</text>
-        <line x1="312" x2="960" y1="36" y2="36" stroke="#1f3a5f" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="960" cy="36" r="8" fill="#1f3a5f"/>
-        <text x="946" y="22" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#1f3a5f" font-weight="600">0.36 SD lower · r = −.36</text>
+<section aria-labelledby="s0">
+  <p class="section-label" id="s0">At a glance</p>
+  <div class="strip">
+    <div class="stat"><span class="stat-value red">3,052</span><span class="stat-label">Adults employed in 2018</span><span class="stat-sub">GESIS Panel, a probability panel of German adults; outcomes followed to 2025</span></div>
+    <div class="stat"><span class="stat-value red">&minus;6.42 and &minus;6.02</span><span class="stat-label">Drop in life satisfaction, 2020 to 2021</span><span class="stat-sub">Points on a 0 to 100 scale, at 1 SD above and 1 SD below average self-compassion; 95% CIs [&minus;8.09, &minus;4.76] and [&minus;7.50, &minus;4.54]</span></div>
+    <div class="stat"><span class="stat-value red">&minus;0.20</span><span class="stat-label">Digital overwhelm in 2024</span><span class="stat-sub">Points on a 1 to 5 agreement scale per SD more self-compassion, compared with average; 95% CI [&minus;0.24, &minus;0.16]</span></div>
+    <div class="stat"><span class="stat-value red">&minus;0.19</span><span class="stat-label">Loneliness in 2024</span><span class="stat-sub">Points on a 1 to 5 scale per SD more self-compassion, compared with average; 95% CI [&minus;0.24, &minus;0.14]; 819 people</span></div>
+  </div>
+</section>
 
-        <text x="0" y="86" font-family="Inter, sans-serif" font-size="14" fill="#15110e" font-weight="600">2024 loneliness, self-critical items</text>
-        <line x1="312" x2="852" y1="82" y2="82" stroke="#15110e" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="852" cy="82" r="8" fill="#15110e"/>
-        <text x="838" y="68" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#15110e">0.30 SD lower · β = −.30</text>
-
-        <text x="0" y="132" font-family="Inter, sans-serif" font-size="14" fill="#15110e" font-weight="600">2024 digital overwhelm</text>
-        <line x1="312" x2="672" y1="128" y2="128" stroke="#15110e" stroke-width="3" stroke-linecap="round"/>
-        <circle cx="672" cy="128" r="8" fill="#15110e"/>
-        <text x="658" y="114" text-anchor="end" font-family="Inter, sans-serif" font-size="12" fill="#15110e">0.20 SD lower · β = −.20</text>
-      </svg>
-      <figcaption>On the 2024 loneliness scale (<em>M</em> = 2.04, <em>SD</em> = 0.70), 0.36 <em>SD</em> is about a quarter of a scale point per standard deviation of the 2018 trait. The β rows hold earlier well-being, age, education, and technology affinity constant; the self-critical row also enters the self-caring items.</figcaption>
-    </figure>
-    <div class="numbers">
-      <div class="reveal">
-        <span class="number-label held">More self-compassion in 2018, <b>less loneliness</b> in 2024.</span>
-        <span class="small-stat held"><em>r</em> = −.36</span>
-        <span class="number-sub">Zero-order correlation. The largest association in the study. Out-of-fold Δ<em>R</em>² = .036 beyond baseline covariates.</span>
-      </div>
-      <div class="reveal">
-        <span class="number-label">The <b>self-critical items</b> carried the loneliness result.</span>
-        <span class="small-stat">β = −.30</span>
-        <span class="number-sub">Fully standardized. After a six-item neuroticism control, β = −.24. The self-caring items added β = .01.</span>
-      </div>
-      <div class="reveal">
-        <span class="number-label">More self-compassion in 2018, <b>less digital overwhelm</b> in 2024.</span>
-        <span class="small-stat">β = −.20</span>
-        <span class="number-sub">Standardized, net of earlier well-being, age, education, and technology affinity. Favorable appraisals β = .10.</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" aria-labelledby="when">
-    <h2 class="section-label" id="when">Six years in one panel</h2>
-    <p class="section-intro">The predictor was fixed in 2018. Every outcome sits later. Life satisfaction was observed each year; loneliness and the technology items were observed in 2024.</p>
-    <div class="timeline reveal">
-      <div class="timeline-track"><span class="band" aria-hidden="true"></span></div>
-      <div class="timeline-marks">
-        <div class="mark"><span class="yr sans">2014</span></div>
-        <div class="mark"></div>
-        <div class="mark"></div>
-        <div class="mark"></div>
-        <div class="mark key"><span class="yr">2018</span><span class="what">Self-Compassion Scale, adults employed that year</span></div>
-        <div class="mark"></div>
-        <div class="mark key"><span class="yr">2020</span><span class="what">Higher life satisfaction at the start of the disruption, +2.16 per <em>SD</em></span></div>
-        <div class="mark"></div>
-        <div class="mark"></div>
-        <div class="mark"></div>
-        <div class="mark key held"><span class="yr">2024</span><span class="what">Lower loneliness, less digital overwhelm</span></div>
-        <div class="mark"><span class="yr sans">2025</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" aria-labelledby="explorer">
-    <h2 class="section-label" id="explorer">Read one path at a time</h2>
-    <div class="calc">
-      <div class="reveal">
-        <fieldset>
-          <legend>Which path?</legend>
-          <label class="control-note" for="path-select">Published associations in an observational panel, not effects of changing the trait.</label>
-          <select id="path-select" aria-label="Path">
-            <option value="lone" selected>2024 loneliness</option>
-            <option value="over">2024 digital overwhelm</option>
-            <option value="level">2020 life-satisfaction level</option>
-          </select>
-          <p class="control-note" id="path-note">Largest association in the study. Reported as estimated; it was not a stated prediction.</p>
-        </fieldset>
-      </div>
-      <div class="results reveal">
-        <span class="big held" id="path-value">−.36</span>
-        <span class="number-label" id="path-label">Zero-order <em>r</em>, 2018 trait with 2024 loneliness</span>
-        <span class="number-sub" id="path-sub">Person-level <em>b</em> = −0.19, 95% CI [−0.24, −0.14], <em>n</em> = 819. Full-sample self-critical β = −.30. Out-of-fold Δ<em>R</em>² = .036.</span>
-        <div class="note-line">
-          <p id="path-verdict">The 2018 score marked later loneliness.</p>
-          <p class="note-sub" id="path-bf">Out-of-fold Δ<em>R</em>² = .036 beyond baseline covariates.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="inverted" aria-labelledby="scoring">
-    <div class="wrap">
-      <h2 class="section-label" id="scoring">The scoring result</h2>
-      <h2>The total score was the self-critical items.</h2>
-      <p class="section-intro">The Self-Compassion Scale pairs self-caring items with reverse-scored self-critical items. The trait factor correlated <em>r</em> = .98 with the self-critical composite. When both composites entered together, the self-critical items carried the 2024 associations.</p>
-      <div class="compare">
-        <svg class="reveal" viewBox="0 0 800 230" role="img" aria-label="Dot plot. For 2024 loneliness, the self-critical composite is at minus point three zero and the self-caring composite at plus point zero one. For digital overwhelm, self-critical is at minus point two one and self-caring near zero. Neuroticism-adjusted estimates are minus point two four and minus point one seven.">
-          <g font-family="Inter, sans-serif" font-size="12" fill="#a89f93">
-            <text x="80" y="212">−.40</text>
-            <text x="592" y="212" text-anchor="middle">0</text>
-            <text x="720" y="212" text-anchor="end">+.10</text>
-          </g>
-          <line x1="592" x2="592" y1="20" y2="196" stroke="#4a443d" stroke-width="1"/>
-          <line x1="80" x2="720" y1="196" y2="196" stroke="#4a443d" stroke-width="1"/>
-
-          <text x="80" y="40" font-family="Inter, sans-serif" font-size="14" fill="#f4efe6" font-weight="600">2024 loneliness</text>
-          <line x1="208" x2="605" y1="68" y2="68" stroke="#4a443d" stroke-width="1.5"/>
-          <circle cx="285" cy="68" r="6" fill="none" stroke="#8fa6c4" stroke-width="2"/>
-          <circle cx="208" cy="68" r="8" fill="#8fa6c4"/>
-          <circle cx="605" cy="68" r="6" fill="#4a443d" stroke="#a89f93" stroke-width="1.5"/>
-          <text x="208" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#f4efe6">−.30</text>
-          <text x="285" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#8fa6c4">−.24</text>
-          <text x="605" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#a89f93">+.01</text>
-
-          <text x="80" y="128" font-family="Inter, sans-serif" font-size="14" fill="#f4efe6" font-weight="600">2024 digital overwhelm</text>
-          <line x1="323" x2="592" y1="156" y2="156" stroke="#4a443d" stroke-width="1.5"/>
-          <circle cx="374" cy="156" r="6" fill="none" stroke="#8fa6c4" stroke-width="2"/>
-          <circle cx="323" cy="156" r="8" fill="#8fa6c4"/>
-          <circle cx="592" cy="156" r="6" fill="#4a443d" stroke="#a89f93" stroke-width="1.5"/>
-          <text x="323" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#f4efe6">−.21</text>
-          <text x="374" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#8fa6c4">−.17</text>
-          <text x="592" y="180" text-anchor="middle" font-family="Inter, sans-serif" font-size="12" fill="#a89f93">≈ 0</text>
-        </svg>
-        <div class="side reveal">
-          <p><strong>Filled dot:</strong> reverse-scored self-critical composite, fully standardized β, full analytic sample under FIML.</p>
-          <p><strong>Ring:</strong> the same estimate with the six-item Big Five Inventory–2 neuroticism scale in the model. Reduced, not removed.</p>
-          <p><strong>Small dot:</strong> the self-caring composite entered at the same time. Its zero-order association was shared with the self-critical items.</p>
-          <p>If a total "self-compassion" score predicts later loneliness or digital overwhelm, check whether you are looking at low self-criticism.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" aria-labelledby="fig2">
-    <h2 class="section-label" id="fig2">The interval test</h2>
-    <p class="section-intro">The implied 2020–2021 change at ±1 <em>SD</em> of the 2018 score, with 95% intervals. They overlap. The trait marked level, not reactivity to the shock.</p>
-    <figure class="drawn reveal">
-      <svg viewBox="0 0 992 100" role="img" aria-label="Implied 2020 to 2021 change with 95 percent intervals at minus and plus one SD. The intervals overlap.">
-        <text x="0" y="16" font-size="12" fill="#6b625a" font-family="Inter, sans-serif">Implied change, 2020–2021 (points on 0–100)</text>
-        <text x="0" y="50" font-size="13" fill="#6b625a" font-family="Inter, sans-serif">−1 SD</text>
-        <line x1="258" x2="672" y1="46" y2="46" stroke="#8a8f94" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="465" cy="46" r="6" fill="#8a8f94"/>
-        <text x="692" y="50" font-size="13" fill="#15110e" font-family="Inter, sans-serif">−6.02 &nbsp;[−7.50, −4.54]</text>
-        <text x="0" y="84" font-size="13" fill="#6b625a" font-family="Inter, sans-serif">+1 SD</text>
-        <line x1="175" x2="642" y1="80" y2="80" stroke="#1f3a5f" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="409" cy="80" r="6" fill="#1f3a5f"/>
-        <text x="692" y="84" font-size="13" fill="#15110e" font-family="Inter, sans-serif">−6.42 &nbsp;[−8.09, −4.76]</text>
-      </svg>
-      <figcaption>Model-implied means at ±1 <em>SD</em> of the 2018 score, other covariates at their means. The paper’s Figure 2 Panel B reports the trait coefficients on those slopes.</figcaption>
-    </figure>
-    <p class="doc-box">Documentation. Implied means from the primary unweighted piecewise model in Monnot (2026), Table 3 / <code>growth_focal.csv</code>. The graphic was specified after the estimates were locked. Observational. Nothing here is an effect of changing the trait.</p>
-  </section>
-
-  <section class="wrap" aria-labelledby="found">
-    <h2 class="section-label" id="found">What the 2018 score marked</h2>
-    <div class="found">
-      <article class="reveal">
-        <span class="ordinal">01</span>
-        <h3>Who was better off at the 2020 knot</h3>
-        <p>The trait was associated with higher life satisfaction then (<em>b</em> = 2.16, β = .14) and with a more positive pre-2020 slope. That is the Yap–Anusic pattern: a trait marks the level people sit at.</p>
-      </article>
-      <article class="reveal">
-        <span class="ordinal">02</span>
-        <h3>2024 loneliness</h3>
-        <p>The 2018 composite correlated <em>r</em> = −.36 with loneliness six years later and added Δ<em>R</em>² = .036 out of fold beyond baseline covariates. This path was not a stated prediction.</p>
-      </article>
-      <article class="reveal">
-        <span class="ordinal">03</span>
-        <h3>Digital overwhelm</h3>
-        <p>The trait was associated with feeling less overwhelmed by digital technology in 2024 (β = −.20) and with slightly more favorable appraisals (β = .10).</p>
-      </article>
-      <article class="reveal">
-        <span class="ordinal">04</span>
-        <h3>The same associations inside and outside care work</h3>
-        <p>Among 2,843 panelists with a valid industry branch, the loneliness and overwhelm slopes matched in care sectors and elsewhere. Most published self-compassion work is in caring professions. These associations were not confined to them.</p>
-      </article>
-    </div>
-  </section>
-
-  <div class="wrap">
-    <details class="model-notes">
-      <summary>Design, data, and what this site does not claim</summary>
+<section id="practice" aria-labelledby="s-prac">
+  <p class="section-label" id="s-prac">What this means in practice</p>
+  <div class="brief">
+    <p class="q">The decision</p>
+    <p class="decision">Employers look for personal resources that help staff come through disruption and new digital demands. The paper asks whether self-compassion, measured before COVID-19, played that protective part.</p>
+    <p class="answer"><strong>Read a self-compassion score as a marker of later well-being. It did not mark who was protected when the pandemic arrived.</strong> Life satisfaction fell about equally at higher and lower self-compassion. Years later, employees with more self-compassion in 2018 reported less loneliness and less digital overwhelm than employees with less. In exploratory models added at the reporting stage, both links were carried by the reverse-scored self-critical items (pp. 2, 37). The design is correlational, so it does not show what raising self-compassion would do.</p>
+  </div>
+  <div class="cards">
+    <div class="card do">
+      <h3>What was found</h3>
       <ul>
-        <li>GESIS Panel.pop Standard Edition, ZA5665, Version 62.0.0. Probability-based mixed-mode panel of German-speaking adults. Secondary analysis under a scientific-use agreement that prohibits redistribution of microdata. No respondent-level data are hosted here; every number is a published aggregate.</li>
-        <li>Analytic sample: adults employed in 2018 with a 2018 Self-Compassion Scale–Short Form score, <em>N</em> = 3,052. Piecewise growth, random-slope multilevel, and multivariate outcome models under full-information maximum likelihood. Bayes factors and repeated nested cross-validation were added at the reporting stage.</li>
-        <li>The design is observational. Self-compassion was not manipulated. Language of resources and buffering names the hypothesized mechanism, not an established one.</li>
-        <li>The sample is more educated than the German population, as an employed subsample would be, and it covers one country’s disruption and telework mandates. Migration background and ethnicity were not modeled.</li>
-        <li>Life satisfaction changed response format in 2021; loneliness anchors changed between 2020 and 2024. Those magnitudes are not interchangeable.</li>
-        <li>No intervention is evaluated. Whether reducing self-criticism would change later loneliness or digital overwhelm has not been tested.</li>
+        <li>Life satisfaction fell 6.22 points on a 0 to 100 scale from 2020 to 2021, about equally at higher and lower self-compassion.</li>
+        <li>More self-compassion in 2018 went with higher life satisfaction at the start of 2020 (2.16 points per SD, compared with average) and with less loneliness and less digital overwhelm in 2024.</li>
+        <li>The 2024 links were the same size inside the care sectors as outside them (&minus;0.20 points on 1 to 5 scales per SD more self-compassion, in both groups).</li>
       </ul>
-    </details>
+    </div>
+    <div class="card ask">
+      <h3>What to watch, as named in the paper</h3>
+      <ul>
+        <li>Harsh self-judgment. If the prospective association runs through the self-critical items, programs aimed at reducing harsh self-judgment are the ones the panel evidence supports. None was tested here. The paper marks the component-specific estimates as exploratory (p. 7).</li>
+        <li>Loneliness and feeling overwhelmed by technology. The paper notes that both matter at work, and the 2018 score improved out-of-sample prediction for these two outcomes.</li>
+      </ul>
+    </div>
+    <div class="card test">
+      <h3>What would sharpen the answer</h3>
+      <ul>
+        <li>An experiment or intervention study that tests whether reducing self-criticism changes later loneliness or digital overwhelm.</li>
+        <li>A randomized trial built around a workplace change, which would test the buffering the measured trait did not show.</li>
+        <li>Scoring the self-caring items and the self-critical items separately, with a full measure of neuroticism.</li>
+      </ul>
+    </div>
+  </div>
+  <p class="fineprint">The first two cards follow the paper&rsquo;s Results and Discussion sections. The third card follows its Limitations and Future Directions sections. To discuss a measurement plan: <a href="mailto:matt@vocentive.com">matt@vocentive.com</a>.</p>
+</section>
 
-    
-<p class="tools-used"><strong>Tools used.</strong> HTML, CSS, and JavaScript.</p>
+<section id="writers" aria-labelledby="s-writ">
+  <p class="section-label" id="s-writ">For writers and editors</p>
+  <p class="oneline" id="oneline">In a German national panel, employees with more self-compassion in 2018 saw their life satisfaction fall about as much as employees with less during COVID-19.</p>
+  <p class="fineprint" style="margin-top:8px"><button type="button" class="copy-btn" id="copy-oneline">Copy this sentence</button></p>
+  <dl class="facts">
+    <dt>Paper</dt><dd>&ldquo;Buffer or Baseline? Trait Self-Compassion and Employee Well-Being Across Disruption, Telework, and Digital Demands in a National Probability Panel,&rdquo; by Matthew J. Monnot (Vocentive).</dd>
+    <dt>Kind of study</dt><dd>Observational. The analytic sample is drawn from the 2013 recruitment cohort and from the 2016 and 2018 refreshes. Of the 3,052 adults employed in 2018, 1,611 have a 2014 life-satisfaction report. Self-compassion was measured in 2018 and 2020. Nobody was given a program or intervention. By the panel&rsquo;s design, the 2020 self-compassion items were administered across four experimental presentation groups (p. 15), and 2020 loneliness was asked of a random half-sample (p. 16).</dd>
+    <dt>Status</dt><dd>Preprint posted on SSRN (2026). Not peer reviewed.</dd>
+    <dt>Data</dt><dd>Existing data from the GESIS Panel.pop Standard Edition (ZA5665, Version 62.0.0), used under a scientific-use agreement that prohibits sharing the respondent-level data. The author did not collect the data. The study was not preregistered; the paper states that the hypotheses were specified before the main models were estimated.</dd>
+    <dt>Who was studied</dt><dd>3,052 adults in the German probability panel who were employed full or part time in 2018. Their average age was 47.36 years, and 47.7% were women.</dd>
+    <dt>AI use</dt><dd>The paper states: &ldquo;During the preparation of this work the author used large language models accessed through Cursor (Anthropic Claude, xAI Grok, OpenAI GPT, and Google Gemini) to draft and revise text, write figure code, and check reported statistics; a word processor with Clippy and autocorrect; and statistical software, so that no coefficient was obtained by hand. The author reviewed, edited, and verified the output and takes full responsibility for the content. These tools are not authors.&rdquo; The preprint carries no funding or competing-interest statement.</dd>
+  </dl>
+  <div class="say-grid">
+    <div class="say yes">
+      <h3>The study supports</h3>
+      <ul>
+        <li>&ldquo;Life satisfaction fell about as much among employees with more self-compassion as among employees with less during the 2020 to 2021 disruption.&rdquo;<span>Implied change &minus;6.42 points at 1 SD above average and &minus;6.02 points at 1 SD below, on a 0 to 100 scale; the intervals overlap.</span></li>
+        <li>&ldquo;Employees with more self-compassion in 2018 felt less overwhelmed by digital technology in 2024 than employees with less.&rdquo;<span>&minus;0.20 points on a 1 to 5 scale per SD more self-compassion, 95% CI [&minus;0.24, &minus;0.16], after accounting for earlier well-being, age, education and technology affinity.</span></li>
+        <li>&ldquo;Employees with more self-compassion in 2018 were less lonely in 2024 than employees with less.&rdquo;<span>&minus;0.19 points on a 1 to 5 scale per SD more self-compassion, 95% CI [&minus;0.24, &minus;0.14], 819 people. The paper reports this link as estimated; it was not a planned test.</span></li>
+      </ul>
+    </div>
+    <div class="say no">
+      <h3>It does not support</h3>
+      <ul>
+        <li>&ldquo;Self-compassion protected employees from the pandemic.&rdquo;<span>The trait was not associated with the size of the 2020 to 2021 decline (&minus;0.10 points per year per SD more self-compassion, 95% CI [&minus;0.71, 0.51]).</span></li>
+        <li>&ldquo;Self-compassion made remote work easier.&rdquo;<span>The telework test was not supported (<em>p</em> = .076), and its direction ran opposite to the predicted cushioning.</span></li>
+        <li>&ldquo;Training self-compassion will reduce loneliness.&rdquo;<span>The design is correlational and no program was tested.</span></li>
+        <li>&ldquo;Self-compassion made people more likely to try new technology.&rdquo;<span>The odds of recently getting familiar with a new digital technology did not differ (odds ratio 0.98 per SD more self-compassion, 95% CI [0.88, 1.08]).</span></li>
+      </ul>
+    </div>
+  </div>
+  <div class="cite-box">
+    <p id="cite-text">Monnot, M. J. (2026). <em>Buffer or baseline? Trait self-compassion and employee well-being across disruption, telework, and digital demands in a national probability panel</em> [Preprint]. SSRN. https://doi.org/10.2139/ssrn.7622018</p>
+    <button type="button" class="copy-btn" id="copy-cite">Copy citation</button>
+  </div>
+  <p class="fineprint">Questions, or a quote: Matthew J. Monnot, <a href="mailto:matt@vocentive.com">matt@vocentive.com</a>.</p>
+</section>
+
+<section id="evidence" aria-labelledby="s1">
+  <p class="section-label" id="s1">1 &middot; Life satisfaction fell by about the same amount at every level of self-compassion</p>
+  <p class="section-intro">The paper fitted one growth curve to yearly life satisfaction, on a 0 to 100 scale. The curve has a segment for the 2020 to 2021 disruption between a segment before 2020 and a recovery segment from 2022. The paper then asked whether self-compassion measured before the pandemic went with the height of the curve or with the size of the fall. Pick a view.</p>
+  <div id="guess"></div>
+  <div id="ls-wrap" class="guess-target">
+  <div class="calc">
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Choose a view of the life-satisfaction results" id="ls-seg">
+        <button type="button" data-k="drop" aria-pressed="true">The 2020 to 2021 drop</button>
+        <button type="button" data-k="links" aria-pressed="false">Self-compassion and each part of the curve</button>
+      </div>
+      <figure class="chart">
+        <svg id="ls-chart" viewBox="0 0 560 220" role="img" aria-labelledby="ls-title ls-desc">
+          <title id="ls-title">Life-satisfaction results for the selected view</title>
+          <desc id="ls-desc">The drop view is a slopegraph. Three lines, for employees 1 SD below average, at average and 1 SD above average in self-compassion, run from the model-implied level of life satisfaction at the start of 2020 to the level after the 2020 to 2021 disruption. The lines are close to parallel. The links view shows the four self-compassion coefficients on the growth curve as dots with 95% interval lines.</desc>
+        </svg>
+        <figcaption id="ls-cap">Values from Table 3 and page 29 of the preprint (<em>N</em> = 3,052). Lines are 95% intervals.</figcaption>
+      </figure>
+    </div>
+    <div class="results" aria-live="polite">
+      <div class="stat">
+        <span class="stat-value red" id="ls-value">&nbsp;</span>
+        <span class="stat-label" id="ls-label">&nbsp;</span>
+        <span class="stat-sub" id="ls-sub">&nbsp;</span>
+      </div>
+      <p class="reading" id="ls-reading">&nbsp;</p>
+      <div class="kicker-bar" id="ls-bar">
+        <p class="kicker-main" id="ls-main">&nbsp;</p>
+        <p class="kicker-sub" id="ls-barsub">&nbsp;</p>
+      </div>
+    </div>
+  </div>
+  </div>
+  <p>At average covariates, life satisfaction stood at 70.05 points on the 0 to 100 scale at the start of 2020 (95% CI [68.35, 71.75]). It fell 3.11 points per year through the disruption, an implied loss of 6.22 points from 2020 to 2021 (95% CI [&minus;7.22, &minus;5.22]), then rose 0.81 points per year from 2022. Self-compassion was also unrelated to loneliness in 2020 (&minus;0.06 points on a 1 to 6 scale per SD more self-compassion, 95% CI [&minus;0.16, 0.03], 1,212 people). Bayes factors favored the models without these links, by ratios of 51.52 for the disruption slope and 18.42 for 2020 loneliness. The disruption coefficient stayed near zero with the 2018-only score, the raw 2018 score, design weights, the 2018 recruits left out, and a broader employment definition (all <em>p</em> &ge; .507).</p>
+  <figure class="paper-figure">
+    <a class="zoom" href="assets/figure1-design-timeline.png" target="_blank" rel="noopener" data-title="Figure 1 of the preprint"><img src="assets/figure1-design-timeline.png" alt="Figure 1 of the preprint: Panel A, a grid showing which measures were fielded in each year from 2014 to 2025; Panel B, horizontal bars showing how many people had each measure, from 11,797 ever enrolled down to 2,137 with 2025 life satisfaction." width="1110" height="1230" loading="lazy"></a>
+    <p class="zoom-hint">Select the figure to enlarge it.</p>
+    <figcaption><strong>Figure 1. How to read it.</strong> Panel A: each row is a measure and each column a year. Dark cells mean the whole sample was asked; lighter cells mean a random half or a filtered subgroup; pale cells mean the item was not fielded. Self-compassion was asked in three 2018 waves (black) and in a shorter six-item form in 2020. Telework share starts in 2021, so it was not measured during the 2020 disruption. Panel B: bar lengths are the number of people at each step, from everyone ever enrolled (11,797) to the 3,052 employed adults in the main sample and the smaller groups with each later outcome.</figcaption>
+  </figure>
+  <figure class="paper-figure">
+    <a class="zoom" href="assets/figure2-life-satisfaction.png" target="_blank" rel="noopener" data-title="Figure 2 of the preprint"><img src="assets/figure2-life-satisfaction.png" alt="Figure 2 of the preprint: Panel A, model-implied life-satisfaction lines from 2014 to 2025 at three levels of self-compassion, each falling between 2020 and 2022 with the label Same decline; Panel B, dot-and-interval plot of four self-compassion coefficients." width="1140" height="675" loading="lazy"></a>
+    <p class="zoom-hint">Select the figure to enlarge it.</p>
+    <figcaption><strong>Figure 2. How to read it.</strong> Panel A: the three lines are model-implied life satisfaction, on a 0 to 100 scale. The dotted line is 1 SD above average self-compassion and the dashed line is 1 SD below; the solid line is average. The lines sit at different heights, and all three drop by about the same amount between the 2020 and 2022 markers. Panel B: each dot is the self-compassion coefficient for one part of the curve, with its 95% interval. The 2020 level (2.16) clears zero; the disruption slope (&minus;0.10) sits on zero.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="s2">
+  <p class="section-label" id="s2">2 &middot; Telework and self-compassion</p>
+  <p class="section-intro">From late 2021 the panel asked what share of working time people spent working from home, on a 1 to 5 scale (share points). The paper asked whether life satisfaction dipped less in the years a person teleworked more if that person was higher in self-compassion. Pick the overall test or one level of self-compassion.</p>
+  <div class="calc">
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Choose the telework test or a level of self-compassion" id="tw-seg">
+        <button type="button" data-k="int" aria-pressed="true">Overall test</button>
+        <button type="button" data-k="lo" aria-pressed="false">Lower (1 SD below)</button>
+        <button type="button" data-k="mid" aria-pressed="false">Average</button>
+        <button type="button" data-k="hi" aria-pressed="false">Higher (1 SD above)</button>
+      </div>
+      <figure class="chart">
+        <svg id="tw-chart" viewBox="0 0 560 200" role="img" aria-labelledby="tw-title tw-desc">
+          <title id="tw-title">Within-person telework slopes at three levels of self-compassion</title>
+          <desc id="tw-desc">Dots with 95% interval lines show the simple slopes reported under Table 4 of the preprint, in life-satisfaction points per share point of telework.</desc>
+        </svg>
+        <figcaption>Values from Table 4 and pages 30 to 31 of the preprint. The slope models used 3,484 person-years from 1,080 persons. Telework share was observed for 1,410 people (6,275 reports). The paper treats the three slopes as descriptive because the overall test was not significant.</figcaption>
+      </figure>
+    </div>
+    <div class="results" aria-live="polite">
+      <div class="stat">
+        <span class="stat-value red" id="tw-value">&nbsp;</span>
+        <span class="stat-label" id="tw-label">&nbsp;</span>
+        <span class="stat-sub" id="tw-sub">&nbsp;</span>
+      </div>
+      <p class="reading" id="tw-reading">&nbsp;</p>
+      <div class="kicker-bar" id="tw-bar">
+        <p class="kicker-main" id="tw-main">&nbsp;</p>
+        <p class="kicker-sub" id="tw-barsub">&nbsp;</p>
+      </div>
+    </div>
+  </div>
+  <p>In the model without the interaction, a year of more telework than a person&rsquo;s own average was not associated with life satisfaction (&minus;0.85 points per share point, 95% CI [&minus;1.91, 0.21], <em>p</em> = .118). A Bayes factor of 12.28 favored the model without the interaction. Telework also showed no link with 2024 loneliness (819 people) or with learning and personal development at work (735 people).</p>
+  <figure class="paper-figure">
+    <a class="zoom" href="assets/figure3-telework.png" target="_blank" rel="noopener" data-title="Figure 3 of the preprint"><img src="assets/figure3-telework.png" alt="Figure 3 of the preprint: Panel A, three lines of life satisfaction against within-person telework at three levels of self-compassion with shaded bands; Panel B, the telework slope across levels of self-compassion with a dashed line at 0.25 SD." width="1140" height="660" loading="lazy"></a>
+    <p class="zoom-hint">Select the figure to enlarge it.</p>
+    <figcaption><strong>Figure 3. How to read it.</strong> Panel A: each line shows life satisfaction, on a 0 to 100 scale, in years when a person teleworked less (left) or more (right) than their own average. The dashed line (1 SD below average self-compassion) is flat; the dotted line (1 SD above) slopes down. The shaded bands overlap widely. Panel B: the line is the telework slope at each level of self-compassion, with its band. The band clears zero only to the right of the dashed marker at 0.25 SD. Because the overall test had <em>p</em> = .076, the paper reads this picture as descriptive.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="s3">
+  <p class="section-label" id="s3">3 &middot; Digital technology in 2024</p>
+  <p class="section-intro">In early 2024 the panel asked about digital technology. The paper tested four outcomes, after accounting for earlier well-being, age, education and technology affinity. Pick an outcome.</p>
+  <div class="calc calc-wide">
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Choose a 2024 technology outcome" id="tc-seg">
+        <button type="button" data-k="over" aria-pressed="true">Feeling overwhelmed</button>
+        <button type="button" data-k="fav" aria-pressed="false">Favorable views</button>
+        <button type="button" data-k="job" aria-pressed="false">Job-loss belief</button>
+        <button type="button" data-k="fam" aria-pressed="false">Trying new technology</button>
+      </div>
+      <p class="control-note">The paper&rsquo;s Figure 4, below, plots these coefficients with their 95% intervals.</p>
+    </div>
+    <div class="results" aria-live="polite">
+      <div class="stat">
+        <span class="stat-value red" id="tc-value">&nbsp;</span>
+        <span class="stat-label" id="tc-label">&nbsp;</span>
+        <span class="stat-sub" id="tc-sub">&nbsp;</span>
+      </div>
+      <p class="reading" id="tc-reading">&nbsp;</p>
+      <div class="kicker-bar" id="tc-bar">
+        <p class="kicker-main" id="tc-main">&nbsp;</p>
+        <p class="kicker-sub" id="tc-barsub">&nbsp;</p>
+      </div>
+    </div>
+  </div>
+  <p>The paper counts two of the four outcomes as supported. A refit with a bias-correcting two-step estimator gave nearly identical standardized coefficients (overwhelm &minus;.22 and favorability .11). For overwhelm versus familiarization, the paper reads the contrast this way: feeling overwhelmed is a judgment about oneself, and familiarizing oneself with a new technology is an action. Overwhelm went with self-compassion; familiarization did not.</p>
+  <figure class="paper-figure">
+    <a class="zoom" href="assets/figure4-technology.png" target="_blank" rel="noopener" data-title="Figure 4 of the preprint"><img src="assets/figure4-technology.png" alt="Figure 4 of the preprint: Panel A, standardized coefficients with intervals for the three continuous outcomes, from minus .20 for digital overwhelm to .10 for favorability; Panel B, odds ratio for recent familiarization (0.98) with its interval." width="1080" height="480" loading="lazy"></a>
+    <p class="zoom-hint">Select the figure to enlarge it.</p>
+    <figcaption><strong>Figure 4. How to read it.</strong> Panel A: each dot is the standardized coefficient for self-compassion on one 2024 outcome, with its 95% interval; the vertical line at 0 means no link. Overwhelm (&minus;.20) and favorability (.10) clear zero, and the job-loss belief (.02) does not. Panel B: the dot is the odds ratio for having recently got familiar with a new digital technology; the line at 1 means no link, and the interval crosses it.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="s4">
+  <p class="section-label" id="s4">4 &middot; Loneliness and the self-critical items</p>
+  <p class="section-intro">Self-compassion was associated with lower loneliness in 2024 (&minus;0.19 points on a 1 to 5 scale per SD more self-compassion, 95% CI [&minus;0.24, &minus;0.14], 819 people), the largest association in the study, though the paper did not set out to test it. The self-compassion scale mixes self-caring items (kindness, common humanity, mindfulness) with reverse-scored self-critical items, and the two sets correlated only <em>r</em> = .26. After the planned tests, the paper entered both sets together. Pick an outcome.</p>
+  <div class="calc">
+    <div class="controls">
+      <div class="seg" role="group" aria-label="Choose a 2024 outcome" id="cp-seg">
+        <button type="button" data-k="lone" aria-pressed="true">Loneliness in 2024</button>
+        <button type="button" data-k="over" aria-pressed="false">Digital overwhelm in 2024</button>
+      </div>
+      <figure class="chart">
+        <div class="multiples" id="cp-multiples">
+          <svg id="cp-lone" viewBox="0 0 300 214" role="img" aria-labelledby="cp-lone-title cp-lone-desc">
+            <title id="cp-lone-title">Loneliness in 2024: standardized coefficients for the self-critical items under each model check</title>
+            <desc id="cp-lone-desc">Horizontal bars from zero. Self-critical items −.297; with the two-item control −.275; with the six-item control −.239; design-weighted −.295; self-caring items .010.</desc>
+          </svg>
+          <svg id="cp-over" viewBox="0 0 300 214" role="img" aria-labelledby="cp-over-title cp-over-desc">
+            <title id="cp-over-title">Digital overwhelm in 2024: standardized coefficients for the self-critical items under each model check</title>
+            <desc id="cp-over-desc">Horizontal bars from zero. Self-critical items −.213; with the two-item control −.177; with the six-item control −.169; design-weighted −.207. The paper gives no self-caring coefficient for this outcome.</desc>
+          </svg>
+        </div>
+        <figcaption>Fully standardized coefficients from pages 35 to 36 of the preprint, full sample (<em>N</em> = 3,052). Higher self-critical scores mean less self-critical responding. Analyses added at the reporting stage. Bars start at zero and run to the left for negative coefficients. A longer bar is a larger coefficient.</figcaption>
+      </figure>
+    </div>
+    <div class="results" aria-live="polite">
+      <div class="stat">
+        <span class="stat-value red" id="cp-value">&nbsp;</span>
+        <span class="stat-label" id="cp-label">&nbsp;</span>
+        <span class="stat-sub" id="cp-sub">&nbsp;</span>
+      </div>
+      <p class="reading" id="cp-reading">&nbsp;</p>
+      <div class="kicker-bar" id="cp-bar">
+        <p class="kicker-main" id="cp-main">&nbsp;</p>
+        <p class="kicker-sub" id="cp-barsub">&nbsp;</p>
+      </div>
+    </div>
+  </div>
+  <p>The total self-compassion score correlated <em>r</em> = .98 with the self-critical items and <em>r</em> = .38 with the self-caring items, so the paper reads its total-score results as, in effect, results for low self-criticism. Among 2,843 people with a known 2018 industry, the loneliness and overwhelm links were the same inside the care sectors (704 people) as elsewhere (2,139 people), at &minus;0.20 points on 1 to 5 scales per SD more self-compassion in both groups.</p>
+</section>
+
+<section aria-labelledby="s5">
+  <p class="section-label" id="s5">5 &middot; Prediction in new cases</p>
+  <p class="section-intro">The paper also checked whether the 2018 score helped predict 2024 outcomes for people the model had not seen, across 10 repeats of 5-fold cross-validation (1,528 to 1,596 complete cases per outcome).</p>
+  <h2>Adding the 2018 self-compassion score improved prediction of 2024 loneliness by .036 of explained variance, compared with baseline covariates alone.</h2>
+  <p class="section-intro">For digital overwhelm the gain was .008. For the other three 2024 outcomes, the gains were .001 or less in absolute value.</p>
+  <p class="fineprint">How to read this. The numbers are gains in out-of-fold <em>R</em>&sup2;, the share of variance explained in held-out cases. Baseline covariates alone explained .099 to .268, and the across-repeat SDs were at most 0.004. Scoring the 12 items separately gave gains of .056 for loneliness and .021 for overwhelm. This analysis was added at the reporting stage.</p>
+</section>
+
+<section aria-labelledby="s6">
+  <p class="section-label" id="s6">6 &middot; What the study found, in order</p>
+  <ul class="todo">
+    <li><strong>The scale split in two.</strong> A one-factor model of the 12 self-compassion items fit poorly (CFI = .848). A model separating the self-caring items from the self-critical items fit better (CFI = .937), with the two factors correlating only <em>r</em> = .32 to .39. The paper kept the planned total score and checked the consequence later.</li>
+    <li><strong>No cushioning in the disruption (Hypothesis 1, not supported).</strong> Self-compassion went with a higher 2020 level (2.16 points per SD, 95% CI [1.40, 2.91]) and was unrelated to the disruption slope (&minus;0.10 points per year per SD, <em>p</em> = .746) or to 2020 loneliness (<em>p</em> = .166).</li>
+    <li><strong>No cushioning in telework (Hypothesis 2, not supported).</strong> The interaction was &minus;0.96 points per share point per SD (<em>p</em> = .076), opposite in direction to the prediction.</li>
+    <li><strong>Loneliness in 2024 (not a planned test).</strong> &minus;0.19 points on a 1 to 5 scale per SD more self-compassion (95% CI [&minus;0.24, &minus;0.14]); zero-order <em>r</em> = &minus;.36 with the 2018 score.</li>
+    <li><strong>Digital technology in 2024 (Hypothesis 3, partial support).</strong> Per SD more self-compassion, overwhelm was lower by .20 SD and favorable views were higher by .10 SD (standardized). No link with the job-loss belief (<em>p</em> = .405) or with trying new technology (<em>p</em> = .641).</li>
+    <li><strong>Low self-criticism carried the links (added at the reporting stage).</strong> Standardized coefficients for the self-critical items were &minus;.30 for loneliness and &minus;.21 for overwhelm; &minus;.24 and &minus;.17 with the six-item neuroticism control.</li>
+    <li><strong>Care sectors.</strong> The loneliness and overwhelm links were the same size inside and outside the care sectors (interactions <em>p</em> = .976 and .995).</li>
+  </ul>
+</section>
+
+<section id="specialists" aria-labelledby="s-spec">
+  <p class="section-label" id="s-spec">For specialists</p>
+  <p class="section-intro">The study design and the main reported estimates in one place. Sources are the preprint&rsquo;s Method and Results, with Tables 1 to 5 and Figures 1 to 4.</p>
+  <table class="spec">
+    <tbody>
+      <tr><th scope="row">Design</th><td>GESIS Panel.pop Standard Edition (ZA5665, Version 62.0.0), a probability-based mixed-mode (web and mail) panel of German-speaking adults, register-recruited at ages 18 to 70 in three cohorts between 2013 and 2018. Predictor: Self-Compassion Scale Short Form, SCS-SF (12 items, 1 to 5) in three 2018 waves plus a six-item 2020 form, entered as second-order trait factor scores. Observational; not preregistered. Bayes factors and cross-validation were added at the reporting stage, as were the two-factor and component models.</td></tr>
+      <tr><th scope="row">Sample</th><td>11,797 ever enrolled; 5,576 with a 2018 SCS-SF score; 5,010 answered the 2018 employment item; analytic <em>N</em> = 3,052 employed full or part time (3,302 under the broad definition). Mean age 47.36 (<em>SD</em> = 11.24); 47.7% women; 40.8% with Abitur. 2,137 with 2025 life satisfaction (70% retention). Retained and absent panelists differed by |<em>d</em>| = 0.00 to 0.20.</td></tr>
+      <tr><th scope="row">Measurement</th><td>One-factor CFI = .848, RMSEA = .057; correlated two-factor CFI = .937, RMSEA = .037; factor <em>r</em> = .32 to .39. Trait factor explained 81% to 86% of occasion-factor variance. &omega; = .75 to .77 in 2018; &omega; = .52 for the 2020 form. Scalar invariance into 2020 partial at best.</td></tr>
+      <tr><th scope="row">Hypothesis 1</th><td>Not supported (Table 3). Piecewise growth, life satisfaction on 0 to 100 POMP: level at 2020 knot 70.05 [68.35, 71.75]; pre-2020 slope 0.40 per year [&minus;0.10, 0.90]; disruption &minus;3.11 per year [&minus;3.61, &minus;2.61]; recovery 0.81 per year [0.46, 1.15]. Trait paths, per SD of the trait (level in points; slopes in points per year): level <em>b</em> = 2.16 [1.40, 2.91], &beta; = .14; pre-2020 0.25 [0.05, 0.45], <em>p</em> = .015; disruption &minus;0.10 [&minus;0.71, 0.51], <em>p</em> = .746; recovery &minus;0.29 [&minus;0.69, 0.11], <em>p</em> = .154. 2020 loneliness (1 to 6 scale) <em>b</em> = &minus;0.06 [&minus;0.16, 0.03], <em>n</em> = 1,212. BF<sub>01</sub> = 51.52 and 18.42.</td></tr>
+      <tr><th scope="row">Hypothesis 2</th><td>Not supported (Table 4). Random-slope multilevel model, 3,484 person-years from 1,080 persons; telework ICC .75. Within-person telework &minus;0.85 points per share point [&minus;1.91, 0.21]; trait 1.58 points per SD [0.49, 2.68]. Cross-level interaction <em>b</em> = &minus;0.96 [&minus;2.01, 0.10], <em>p</em> = .076; simple slopes 0.10 [&minus;1.39, 1.59] at &minus;1 SD and &minus;1.81 [&minus;3.31, &minus;0.31] at +1 SD; Johnson-Neyman bound 0.25 SD. BF<sub>01</sub> = 12.28. Frequency-weighted model <em>p</em> = .037 without the random slope and <em>p</em> = .059 with it.</td></tr>
+      <tr><th scope="row">2024 loneliness</th><td>Person-level <em>b</em> = &minus;0.19 points on the 1 to 5 scale per SD [&minus;0.24, &minus;0.14], <em>n</em> = 819; not a hypothesized path. Zero-order <em>r</em> = &minus;.36 (Table 1). Out-of-fold &Delta;<em>R</em>&sup2; = .036.</td></tr>
+      <tr><th scope="row">Hypothesis 3</th><td>Partial support (Table 5); outcomes on 1 to 5 agreement scales, per SD of the trait. Overwhelm <em>b</em> = &minus;0.20 [&minus;0.24, &minus;0.16], &beta; = &minus;.20; favorability 0.06 [0.04, 0.09], &beta; = .10 (&alpha; = .29); job-loss belief 0.02 [&minus;0.03, 0.07], <em>p</em> = .405; familiarization OR = 0.98 [0.88, 1.08], <em>n</em> = 2,066. BF<sub>10</sub> = 1.44 &times; 10<sup>19</sup> and 3,179.03; BF<sub>01</sub> = 38.01 and 40.73. The job-loss item was hypothesized on its registry label (&ldquo;use for job retention&rdquo;); its stem measures a national job-loss belief.</td></tr>
+      <tr><th scope="row">Components</th><td>Trait <em>r</em> = .98 with the reverse-scored self-critical composite and .38 with the self-caring composite. Loneliness (<em>n</em> = 2,174): self-critical &beta; = &minus;.297, self-caring &beta; = .010; &minus;.275 with the two-item BFI-10 control, &minus;.239 with the six-item BFI-2 scale (<em>n</em> = 1,616), &minus;.295 weighted. Overwhelm (<em>n</em> = 2,183): &minus;.213; &minus;.177; &minus;.169; &minus;.207 weighted. Two-factor H2 interaction for the reversed negative composite <em>b</em> = &minus;1.24 [&minus;2.39, &minus;0.09], <em>p</em> = .034.</td></tr>
+      <tr><th scope="row">Limits</th><td>Correlational design. Two-item neuroticism control is weak (&alpha; &asymp; .47 to .54). Single-item life satisfaction changed format in 2021; loneliness anchors changed between 2020 and 2024. Favorability &alpha; = .29. Telework not measured in 2020. Three prespecified sensitivity models were not obtained. Missing data assumed missing at random.</td></tr>
+      <tr><th scope="row">Materials</th><td>Analyses in R 4.5.2 (lavaan, lme4). The paper states that analysis code will be posted in a persistent public repository when the article is published. GESIS data are available under a scientific-use agreement. No respondent-level data are hosted on this page.</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<details class="model-notes">
+  <summary>What this site does and does not show</summary>
+  <ul>
+    <li>No respondent-level data are hosted here. Every estimate, interval and sample size on this page is a published aggregate from the preprint. Nothing is estimated in the browser.</li>
+    <li>There is no &ldquo;of every 100 people&rdquo; picture. A conversion of that kind is not reported in the paper and would carry no interval ends, so the page gives the published numbers.</li>
+    <li>No intervention is evaluated. Whether reducing self-criticism would change later loneliness or digital overwhelm has not been tested.</li>
+  </ul>
+</details>
+
+<section aria-labelledby="tools-used">
+  <p class="section-label" id="tools-used">Tools used</p>
+  <p>Analyses: R 4.5.2, as reported in the preprint.</p>
+</section>
 
 <footer>
-      <p>Monnot, M. J. (2026). Buffer or baseline? Trait self-compassion and employee well-being across disruption, telework, and digital demands in a national probability panel. SSRN preprint. <a href="https://doi.org/10.2139/ssrn.7622018">https://doi.org/10.2139/ssrn.7622018</a> &middot; <a href="https://mjmonnot.github.io/assets/pdfs/Monnot_2026_Buffer_or_Baseline_SelfCompassion_SSRN_7622018.pdf">PDF</a></p>
-      <p><a href="https://mjmonnot.github.io/">mjmonnot.github.io</a><br>Contact: <a href="mailto:matt@vocentive.com">matt@vocentive.com</a></p>
-    </footer>
-  </div>
+  <p>Monnot, M. J. (2026). <em>Buffer or baseline? Trait self-compassion and employee well-being across disruption, telework, and digital demands in a national probability panel</em> [Preprint]. SSRN. <a href="https://doi.org/10.2139/ssrn.7622018">https://doi.org/10.2139/ssrn.7622018</a> &middot; <a href="https://mjmonnot.github.io/assets/pdfs/Monnot_2026_Buffer_or_Baseline_SelfCompassion_SSRN_7622018.pdf">PDF</a></p>
+  <p><a href="https://mjmonnot.github.io/">mjmonnot.github.io</a> &middot; Contact: matt@vocentive.com</p>
+</footer>
+
 </main>
-<script src="app.js"></script>
+<script src="assets/companion.js"></script>
+<script>
+(function () {
+  "use strict";
+  var NS = "http://www.w3.org/2000/svg";
+  function el(n, a, t) { var e = document.createElementNS(NS, n); for (var k in a) e.setAttribute(k, a[k]); if (t != null) e.textContent = t; return e; }
+  function clear(svg) { Array.prototype.slice.call(svg.childNodes).forEach(function (n) { if (n.nodeName !== "title" && n.nodeName !== "desc") svg.removeChild(n); }); }
+  function fmt(v, d) { var a = Math.abs(v).toFixed(d == null ? 2 : d); if (a.charAt(0) === "0" && d !== 0 && Math.abs(v) < 1) a = a.slice(1); return (v < 0 ? "\u2212" : (v > 0 && d === -1 ? "+" : "")) + a; }
+  function sgn(v) { return (v < 0 ? "\u2212" : "+") + Math.abs(v).toFixed(2); }
+  function seg(id, render) {
+    var bs = document.querySelectorAll("#" + id + " button");
+    Array.prototype.forEach.call(bs, function (b) {
+      b.addEventListener("click", function () {
+        Array.prototype.forEach.call(bs, function (o) { o.setAttribute("aria-pressed", o === b ? "true" : "false"); });
+        render(b.getAttribute("data-k"));
+      });
+    });
+  }
+  function fill(prefix, o) {
+    var v = document.getElementById(prefix + "-value");
+    v.textContent = o.value; v.className = "stat-value " + (o.muted ? "ink" : "red");
+    document.getElementById(prefix + "-label").innerHTML = o.label;
+    document.getElementById(prefix + "-sub").innerHTML = o.sub;
+    document.getElementById(prefix + "-reading").innerHTML = o.reading;
+    document.getElementById(prefix + "-bar").className = "kicker-bar" + (o.muted ? " muted" : "");
+    document.getElementById(prefix + "-main").innerHTML = o.main;
+    document.getElementById(prefix + "-barsub").innerHTML = o.barsub;
+  }
+  var RED = "#c0392b", GREY = "#9aa3ad", BLUE = "#4a6a8a";
+  function axis(svg, x, ticks, y1, y2, ty, d) {
+    ticks.forEach(function (t) {
+      svg.appendChild(el("line", { x1: x(t), x2: x(t), y1: y1, y2: y2, "class": t === 0 ? "zero" : "grid" }));
+      svg.appendChild(el("text", { x: x(t), y: ty, "text-anchor": "middle" }, t === 0 ? "0" : fmt(t, d)));
+    });
+  }
+  function dotRows(svg, rows, x, top, step, L) {
+    rows.forEach(function (r, i) {
+      var y = top + i * step, c = r.c;
+      svg.appendChild(el("text", { x: 8, y: y + 5, "class": "lbl" }, r.n));
+      if (r.v == null) { svg.appendChild(el("text", { x: L + 4, y: y + 5, fill: "#5b6570" }, "not reported")); return; }
+      if (r.ci) svg.appendChild(el("line", { x1: x(r.ci[0]), x2: x(r.ci[1]), y1: y, y2: y, stroke: c, "stroke-width": r.hl ? 4 : 2 }));
+      svg.appendChild(el("circle", { cx: x(r.v), cy: y, r: r.hl ? 8 : 6, fill: r.sig ? c : "#fff", stroke: c, "stroke-width": 2 }));
+      var tx = r.ci ? x(r.ci[1]) + 8 : x(r.v) + 12;
+      svg.appendChild(el("text", { x: tx, y: y + 5 }, r.t));
+    });
+  }
+
+  /* 1 . Table 3 and p. 29: life-satisfaction growth model. */
+  var LS0 = 70.05; /* level at the start of 2020 at average covariates, 95% CI [68.35, 71.75] (page 29, Table 3) */
+  var LS = {
+    drop: { rows: [
+        { n: "1 SD below average", v: -6.02, ci: [-7.50, -4.54], t: "\u22126.02" },
+        { n: "Average", v: -6.22, ci: [-7.22, -5.22], t: "\u22126.22" },
+        { n: "1 SD above average", v: -6.42, ci: [-8.09, -4.76], t: "\u22126.42" }],
+      lo: -10, hi: 0, ticks: [-10, -8, -6, -4, -2, 0], d: 0, axl: "Implied change, 2020 to 2021 (points, 0 to 100 scale)",
+      value: "\u22126.42 and \u22126.02", label: "Implied drop, 2020 to 2021, at 1 SD above and 1 SD below average self-compassion",
+      sub: "Points on a 0 to 100 scale; 95% CIs [\u22128.09, \u22124.76] and [\u22127.50, \u22124.54] (page 29)",
+      reading: "Employees 1 SD above average in self-compassion lost an implied 6.42 points from 2020 to 2021, and employees 1 SD below average lost 6.02 points. The intervals overlap. The average loss was 6.22 points.",
+      main: "About the same drop at every level (Hypothesis 1, not supported).", barsub: "Self-compassion and the disruption slope: \u22120.10 points per year per SD more self-compassion, <em>p</em> = .746 (Table 3).", muted: false },
+    links: { rows: [
+        { n: "2020 level", v: 2.16, ci: [1.40, 2.91], t: "2.16", sig: 1 },
+        { n: "Slope before 2020", v: 0.25, ci: [0.05, 0.45], t: "0.25", sig: 1 },
+        { n: "Disruption slope", v: -0.10, ci: [-0.71, 0.51], t: "\u22120.10", sig: 0 },
+        { n: "Recovery slope", v: -0.29, ci: [-0.69, 0.11], t: "\u22120.29", sig: 0 }],
+      lo: -1, hi: 3.5, ticks: [-1, 0, 1, 2, 3], d: 0, axl: "Per SD more self-compassion: points (level), points per year (slopes)",
+      value: "2.16", label: "Higher life satisfaction at the start of 2020, per SD more self-compassion, compared with average",
+      sub: "Points on a 0 to 100 scale; 95% CI [1.40, 2.91]; &beta; = .14 (Table 3)",
+      reading: "Employees higher in self-compassion sat higher on the curve: 2.16 points per SD at the start of 2020, with a more positive slope before 2020 (0.25 points per year per SD). Self-compassion was not significantly associated with their slope through the disruption (\u22120.10 points per year per SD, 95% CI [\u22120.71, 0.51]; an exploratory Bayes factor of 51.52 favored the model without that path) or with their recovery slope (\u22120.29 points per year per SD, 95% CI [\u22120.69, 0.11], <em>p</em> = .154).",
+      main: "Self-compassion went with the height of the curve.", barsub: "Red dots are significant (<em>p</em> &lt; .05); open grey dots are not.", muted: false }
+  };
+  var lsSvg = document.getElementById("ls-chart");
+  var lsView = "drop", lsGuess = null;
+  var INK = "#22303c", MID = "#7a8794", LBL = "#5b6570", SRED = "#c0392b";
+  var LSCAP = {
+    drop: "Levels are computed here from published values: 70.05 points at the start of 2020 at average self-compassion, 2.16 points more per SD, and the implied change at each level (Table 3 and page 29 of the preprint, <em>N</em> = 3,052). The 95% intervals for the three changes are [&minus;7.50, &minus;4.54] at 1 SD below average, [&minus;7.22, &minus;5.22] at average and [&minus;8.09, &minus;4.76] at 1 SD above. The chart shows only the range from 60 to 74 points of the 0 to 100 scale.",
+    links: "Values from Table 3 and page 29 of the preprint (<em>N</em> = 3,052). Lines are 95% intervals."
+  };
+  function txt(svg, x, y, str, o) {
+    o = o || {};
+    var t = el("text", { x: x, y: y, "text-anchor": o.a || "start", style: "fill:" + (o.f || LBL) + ";font-weight:" + (o.w || 400) }, str);
+    svg.appendChild(t); return t;
+  }
+  function drawLsDrop(d) {
+    var XL = 62, XR = 215, top = 56, per = 14.2;
+    var y = function (v) { return top + (74 - Math.max(60, Math.min(74, v))) * per; };
+    var cfg = [{ f: INK, w: 2, r: 4, tw: 400 }, { f: MID, w: 1.5, r: 3.5, tw: 400 }, { f: SRED, w: 3.5, r: 5, tw: 700 }];
+    var lines = d.rows.map(function (r, i) {
+      var s0 = LS0 + (i - 1) * LS.links.rows[0].v;
+      return { n: r.n, t: r.t, s: s0, e: s0 + r.v, c: cfg[i] };
+    });
+    var obst = [], rects = [];
+    txt(lsSvg, XL, 36, "Start of 2020", { a: "middle", f: INK, w: 700 });
+    txt(lsSvg, XR, 18, "After the 2020 to 2021", { a: "middle", f: INK, w: 700 });
+    txt(lsSvg, XR, 36, "disruption", { a: "middle", f: INK, w: 700 });
+    lines.forEach(function (l) {
+      var y0 = y(l.s), y1 = y(l.e), c = l.c;
+      lsSvg.appendChild(el("line", { x1: XL, y1: y0, x2: XR, y2: y1, stroke: c.f, "stroke-width": c.w, "stroke-linecap": "round" }));
+      lsSvg.appendChild(el("circle", { cx: XL, cy: y0, r: c.r, fill: c.f }));
+      lsSvg.appendChild(el("circle", { cx: XR, cy: y1, r: c.r, fill: c.f }));
+      txt(lsSvg, XL - 10, y0 + 5, l.s.toFixed(2), { a: "end", f: c.f === MID ? LBL : c.f, w: c.tw });
+      var te = txt(lsSvg, XR + 12, y1 + 5, l.e.toFixed(2), { f: c.f === MID ? LBL : c.f, w: c.tw });
+      var ts = el("tspan", { dx: 8, style: "font-weight:" + c.tw }, l.n); te.appendChild(ts);
+      var xm = (XL + XR) / 2, ym = (y0 + y1) / 2;
+      txt(lsSvg, xm, ym + 5, l.t, { a: "middle", f: c.f, w: 700 }).setAttribute("style", "fill:" + c.f + ";font-weight:700;stroke:#faf7f2;stroke-width:6px;paint-order:stroke;stroke-linejoin:round");
+      for (var x = XL; x <= XR; x += 4) obst.push([x, y0 + (y1 - y0) * (x - XL) / (XR - XL)]);
+      rects.push([XR + 8, y1 - 13, XR + 12 + 7.4 * (l.e.toFixed(2).length + l.n.length) + 10, y1 + 5]);
+      rects.push([xm - 24, ym - 9, xm + 24, ym + 9]);
+      rects.push([XL - 54, y0 - 13, XL - 6, y0 + 5]);
+    });
+    txt(lsSvg, 10, 270, "about the same drop at every level");
+    rects.push([8, 256, 262, 274]);
+    if (lsGuess != null) {
+      var yg = y(lines[2].s - lsGuess);
+      lsSvg.appendChild(el("line", { x1: XL, y1: y(lines[2].s), x2: XR, y2: yg, stroke: SRED, "stroke-width": 1, "stroke-dasharray": "3 3" }));
+      lsSvg.appendChild(el("circle", { cx: XR, cy: yg, r: 8, fill: "none", stroke: SRED, "stroke-width": 2 }));
+      for (var q = 0; q <= 1; q += 0.04) obst.push([XL + (XR - XL) * q, y(lines[2].s) + (yg - y(lines[2].s)) * q]);
+      var W = 7.4 * 10 + 4, hit = function (x0, yb) {
+        var r = [x0, yb - 13, x0 + W, yb + 4];
+        if (r[1] < 40 || r[3] > 252) return true;
+        for (var a = 0; a < rects.length; a++) { var b = rects[a]; if (r[0] < b[2] + 2 && r[2] > b[0] - 2 && r[1] < b[3] + 2 && r[3] > b[1] - 2) return true; }
+        for (var k = 0; k < obst.length; k++) { var p = obst[k]; if (p[0] > r[0] - 3 && p[0] < r[2] + 3 && p[1] > r[1] - 4 && p[1] < r[3] + 4) return true; }
+        return false;
+      };
+      var pos = null, dys = [0, -4, 4, -8, 8, -12, 12, -16, 16, -20, 20, -24, 24];
+      for (var m = 0; m < dys.length && !pos; m++) {
+        var yb = yg + 5 + dys[m];
+        if (!hit(XR + 14, yb)) pos = { x: XR + 14, y: yb, a: "start" };
+        else if (!hit(XR - 14 - W, yb)) pos = { x: XR - 14, y: yb, a: "end" };
+      }
+      if (!pos) pos = { x: XR + 14, y: yg + 5, a: "start" };
+      txt(lsSvg, pos.x, pos.y, "your guess", { a: pos.a, f: SRED, w: 700 });
+    }
+  }
+  function drawLs(k) {
+    var d = LS[k]; clear(lsSvg); lsView = k;
+    lsSvg.setAttribute("viewBox", k === "drop" ? "0 0 440 280" : "0 0 560 220");
+    if (k === "drop") drawLsDrop(d);
+    else {
+      var L = 170, R = 70, W = 560;
+      var x = function (v) { return L + (W - L - R) * (v - d.lo) / (d.hi - d.lo); };
+      var n = d.rows.length, top = 30, step = n === 3 ? 52 : 40, bot = top + (n - 1) * step + 20;
+      axis(lsSvg, x, d.ticks, 12, bot, bot + 18, d.d);
+      d.rows.forEach(function (r) { r.c = r.sig ? RED : GREY; });
+      dotRows(lsSvg, d.rows, x, top, step, L);
+      lsSvg.appendChild(el("text", { x: (L + W - R) / 2, y: bot + 38, "text-anchor": "middle", "class": "lbl" }, d.axl));
+    }
+    document.getElementById("ls-cap").innerHTML = LSCAP[k];
+    fill("ls", d);
+  }
+  seg("ls-seg", drawLs);
+  drawLs("drop");
+  Companion.guess(document.getElementById("guess"), {
+    question: "Before you look: employees 1 SD below average in self-compassion lost an implied 6.02 points of life satisfaction, on a 0 to 100 scale, across 2020 and 2021. How many points did employees 1 SD above average lose?",
+    min: 0, max: 12, step: 0.1, start: 6,
+    format: function (v) { return v.toFixed(1) + " points"; },
+    reveal: document.getElementById("ls-wrap"),
+    feedback: function (v) {
+      var g = v.toFixed(1), d = v - 6.42;
+      lsGuess = v; drawLs(lsView);
+      if (Math.abs(d) <= 0.5) return "You guessed <strong>" + g + "</strong> points. The paper&rsquo;s estimate is <strong>6.42</strong>, so you were close. That is about the same as the 6.02 points for employees lower in self-compassion.";
+      if (d < 0) return "You guessed <strong>" + g + "</strong> points. The paper&rsquo;s estimate is <strong>6.42</strong>, about the same as the 6.02 points for employees lower in self-compassion. The difference between the two was not statistically significant.";
+      return "You guessed <strong>" + g + "</strong> points. The paper&rsquo;s estimate is <strong>6.42</strong>, about the same as the 6.02 points for employees lower in self-compassion.";
+    }
+  });
+
+  /* 2 . Table 4: telework simple slopes and interaction. */
+  var TWR = [["1 SD below average", 0.10, [-1.39, 1.59], "0.10"], ["Average", -0.85, [-1.91, 0.20], "\u22120.85"], ["1 SD above average", -1.81, [-3.31, -0.31], "\u22121.81"]];
+  var TW = {
+    int: { h: -1, value: "\u22120.96", label: "Overall test: change in the telework slope per SD more self-compassion",
+      sub: "Points per share point; 95% CI [\u22122.01, 0.10]; <em>p</em> = .076 (Table 4)",
+      reading: "The telework slope did not differ significantly by self-compassion. Its direction ran opposite to the prediction: a year of more telework than usual went with lower life satisfaction among employees higher in self-compassion.",
+      main: "No cushioning (Hypothesis 2, not supported).", barsub: "A Bayes factor of 12.28 favored the model without the interaction.", muted: true },
+    lo: { h: 0, value: "0.10", label: "Telework slope at 1 SD below average self-compassion",
+      sub: "Life-satisfaction points per share point; 95% CI [\u22121.39, 1.59]; <em>p</em> = .893 (Table 4)",
+      reading: "For employees 1 SD below average in self-compassion, a year of more telework than usual showed no link with life satisfaction.",
+      main: "Flat at lower self-compassion.", barsub: "Descriptive only, because the overall test was not significant.", muted: true },
+    mid: { h: 1, value: "\u22120.85", label: "Telework slope at average self-compassion",
+      sub: "Life-satisfaction points per share point; 95% CI [\u22121.91, 0.20]; <em>p</em> = .114 (Table 4)",
+      reading: "At average self-compassion, a year of more telework than usual went with a dip in life satisfaction that was not significant.",
+      main: "No clear link at the average.", barsub: "Descriptive only, because the overall test was not significant.", muted: true },
+    hi: { h: 2, value: "\u22121.81", label: "Telework slope at 1 SD above average self-compassion",
+      sub: "Life-satisfaction points per share point; 95% CI [\u22123.31, \u22120.31]; <em>p</em> = .018 (Table 4)",
+      reading: "For employees 1 SD above average in self-compassion, each share point of telework above their own average went with 1.81 points lower life satisfaction, on a 0 to 100 scale. That is the reverse of the predicted cushioning.",
+      main: "The one slope that cleared zero ran the unpredicted way.", barsub: "Descriptive only; the overall test had <em>p</em> = .076.", muted: false }
+  };
+  var twSvg = document.getElementById("tw-chart");
+  function drawTw(k) {
+    var d = TW[k]; clear(twSvg);
+    var L = 170, R = 70, W = 560, lo = -4, hi = 2;
+    var x = function (v) { return L + (W - L - R) * (v - lo) / (hi - lo); };
+    axis(twSvg, x, [-4, -3, -2, -1, 0, 1, 2], 12, 146, 164, 0);
+    var rows = TWR.map(function (r, i) { return { n: r[0], v: r[1], ci: r[2], t: r[3], sig: i === 2 ? 1 : 0, hl: d.h === i, c: (d.h === i || d.h === -1) ? (i === 2 ? RED : BLUE) : GREY }; });
+    dotRows(twSvg, rows, x, 36, 46, L);
+    twSvg.appendChild(el("text", { x: (L + W - R) / 2, y: 186, "text-anchor": "middle", "class": "lbl" }, "Life-satisfaction points per share point of telework"));
+    fill("tw", d);
+  }
+  seg("tw-seg", drawTw);
+  drawTw("int");
+
+  /* 3 . Table 5: 2024 technology outcomes. */
+  var TC = {
+    over: { h: 0, value: "\u22120.20", label: "Digital overwhelm in 2024, per SD more self-compassion, compared with average",
+      sub: "Points on a 1 to 5 agreement scale; 95% CI [\u22120.24, \u22120.16]; &beta; = \u2212.20 (Table 5)",
+      reading: "Employees higher in self-compassion agreed less with &ldquo;I feel overwhelmed by all the new digital possibilities in my everyday life.&rdquo; The link was \u22120.20 points per SD more self-compassion, after accounting for earlier well-being, age, education and technology affinity.",
+      main: "Supported (Hypothesis 3).", barsub: "Bayes factor 1.44 &times; 10<sup>19</sup> in favor of the link.", muted: false },
+    fav: { h: 1, value: "0.06", label: "Favorable views of technology in 2024, per SD more self-compassion, compared with average",
+      sub: "Composite points; 95% CI [0.04, 0.09]; &beta; = .10 (Table 5)",
+      reading: "Employees higher in self-compassion held slightly more favorable views of digital technology. The paper declines to interpret the self-critical versus self-caring estimates for favorability: the three-item composite had low internal consistency (&alpha; = .29).",
+      main: "Supported (Hypothesis 3), on a weak measure.", barsub: "Bayes factor 3,179.03 in favor of the link.", muted: false },
+    job: { h: 2, value: "0.02", label: "Belief that unused digitalization will cost jobs in Germany, per SD more self-compassion",
+      sub: "Points on a 1 to 5 agreement scale; 95% CI [\u22120.03, 0.07]; <em>p</em> = .405 (Table 5)",
+      reading: "No link. The item reads, in translation: &ldquo;If the opportunities offered by digitalization are not exploited, many jobs will be lost in Germany.&rdquo; The hypothesis was written for its registry label, &ldquo;use for job retention,&rdquo; and the paper discloses the mismatch.",
+      main: "Not supported.", barsub: "Bayes factor 38.01 in favor of no link.", muted: true },
+    fam: { h: -1, value: "0.98", label: "Odds of recently getting familiar with a new digital technology, per SD more self-compassion",
+      sub: "Odds ratio; 95% CI [0.88, 1.08]; <em>p</em> = .641; 2,066 people (Table 5)",
+      reading: "Self-compassion showed no link with having got familiar with a new digital technology in the past three months: the odds were 0.98 times as high per SD more self-compassion, compared with average. The paper notes that this outcome is an action, while overwhelm is a judgment about oneself.",
+      main: "Not supported.", barsub: "Bayes factor 40.73 in favor of no link. Shown as an odds ratio in Figure 4, Panel B.", muted: true }
+  };
+  function drawTc(k) { fill("tc", TC[k]); }
+  seg("tc-seg", drawTc);
+  drawTc("over");
+
+  /* 4 . pp. 35 to 36: component-specific and neuroticism-adjusted estimates. */
+  var CPN = ["Self-critical items", "With two-item control", "With six-item control", "Design-weighted", "Self-caring items"];
+  var CP = {
+    lone: { b: [-0.297, -0.275, -0.239, -0.295, 0.010], value: "\u2212.30", label: "Loneliness in 2024: standardized coefficient for the self-critical items",
+      sub: "SD per SD less self-critical responding; &beta; = \u2212.297; 2,174 people (page 35)",
+      reading: "Employees who answered the self-critical items less harshly reported less loneliness in 2024. The self-caring items, entered at the same time, added nothing (&beta; = .010). With the six-item neuroticism control the coefficient was \u2212.239, on 1,616 people.",
+      main: "Reduced but not removed by neuroticism.", barsub: "Zero-order <em>r</em> = \u2212.398 for the self-critical items.", muted: false },
+    over: { b: [-0.213, -0.177, -0.169, -0.207, null], value: "\u2212.21", label: "Digital overwhelm in 2024: standardized coefficient for the self-critical items",
+      sub: "SD per SD less self-critical responding; &beta; = \u2212.213; 2,183 people (page 36)",
+      reading: "The same pattern held for digital overwhelm: \u2212.177 with the two-item neuroticism control and \u2212.169 with the six-item control. The paper gives no separate self-caring-item coefficient for this outcome in these models.",
+      main: "Reduced but not removed by neuroticism.", barsub: "The paper reports that neuroticism reduced both links by at most one fifth.", muted: false }
+  };
+  var CPS = { lone: document.getElementById("cp-lone"), over: document.getElementById("cp-over") };
+  var CPT = { lone: "Loneliness in 2024", over: "Digital overwhelm in 2024" };
+  var CPC = [SRED, "#2e6f9e", "#2e6f9e", "#2e6f9e", MID];
+  var cpHits = {};
+  function selectCp(k) {
+    var bs = document.querySelectorAll("#cp-seg button");
+    Array.prototype.forEach.call(bs, function (o) { o.setAttribute("aria-pressed", o.getAttribute("data-k") === k ? "true" : "false"); });
+    drawCp(k);
+  }
+  function drawCpPanel(k, sel) {
+    var svg = CPS[k], d = CP[k];
+    var x = function (v) { return 10 + (v + 0.35) / 0.4 * 280; };
+    clear(svg);
+    var g = el("g", { "class": "pan", opacity: sel ? 1 : 0.45 });
+    svg.appendChild(g);
+    txt(g, 0, 16, CPT[k], { f: INK, w: 700 });
+    g.appendChild(el("line", { x1: x(0), x2: x(0), y1: 26, y2: 212, stroke: INK, "stroke-width": 1 }));
+    d.b.forEach(function (v, i) {
+      if (v == null) return;
+      var ly = 44 + i * 36, by = ly + 6, x0 = x(0), x1 = x(v);
+      txt(g, 0, ly, CPN[i]);
+      g.appendChild(el("rect", { x: Math.min(x0, x1), y: by, width: Math.abs(x1 - x0), height: 12, fill: CPC[i] }));
+      if (v < 0) txt(g, x1 - 6, by + 11, fmt(v, 3), { a: "end", f: INK, w: 700 });
+      else {
+        txt(g, x0 - 8, by + 11, fmt(v, 3), { a: "end", f: INK, w: 700 });
+        if (k === "lone") txt(g, x0 - 50, by + 11, "added nothing", { a: "end" });
+      }
+    });
+    var hit = el("rect", { x: -4, y: -4, width: 308, height: 222, "class": "pan-hit", tabindex: 0, role: "button", "aria-label": "Show " + CPT[k], "aria-pressed": sel ? "true" : "false" });
+    hit.addEventListener("click", function () { selectCp(k); });
+    hit.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " " || e.key === "Spacebar") { e.preventDefault(); selectCp(k); setTimeout(function () { var h = CPS[k].querySelector(".pan-hit"); if (h) h.focus(); }, 0); } });
+    svg.appendChild(hit);
+  }
+  function drawCp(k) {
+    drawCpPanel("lone", k === "lone");
+    drawCpPanel("over", k === "over");
+    fill("cp", CP[k]);
+  }
+  seg("cp-seg", drawCp);
+  drawCp("lone");
+
+  /* Writers' block: copy buttons. */
+  Companion.copy(document.getElementById("copy-oneline"), function () { return document.getElementById("oneline").textContent; });
+  Companion.copy(document.getElementById("copy-cite"), function () { return document.getElementById("cite-text").textContent; });
+})();
+</script>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightbox-title" hidden>
+  <div class="lightbox-bar"><span id="lightbox-title"></span><span class="lightbox-buttons"><button type="button" id="lightbox-size">Larger</button> <button type="button" id="lightbox-close">Close</button></span></div>
+  <div class="lightbox-scroll" id="lightbox-scroll"></div>
+</div>
+<script>
+/* Paper figures: enlarge on click. Without script the link opens the image file. */
+(function () {
+  "use strict";
+  var links = document.querySelectorAll(".paper-figure a.zoom");
+  var box = document.getElementById("lightbox");
+  if (!links.length || !box) return;
+  var scroller = document.getElementById("lightbox-scroll");
+  var img = document.createElement("img");
+  img.id = "lightbox-img"; img.alt = "";
+  var title = document.getElementById("lightbox-title");
+  var closeBtn = document.getElementById("lightbox-close");
+  var sizeBtn = document.getElementById("lightbox-size");
+  var last = null, large = false;
+  /* Two sizes. Fitted: the figure's full width inside the window. Larger: 1.8 times the window, at most twice the file's own width. */
+  function fit() {
+    var nat = img.naturalWidth || 0;
+    if (!nat) return;
+    var avail = scroller.clientWidth - 32;
+    var w = large ? Math.min(nat * 2, Math.max(Math.round(avail * 1.8), Math.min(nat, 1300))) : Math.min(avail, nat * 2);
+    img.style.width = w + "px";
+    img.className = large ? "large" : "";
+    sizeBtn.textContent = large ? "Fit to window" : "Larger";
+  }
+  function toggle() { large = !large; fit(); scroller.scrollTop = 0; scroller.scrollLeft = 0; }
+  function open(a) {
+    var small = a.querySelector("img");
+    last = a;
+    /* Start fitted on a roomy screen and at the larger size on a narrow one. */
+    img.onload = function () { large = (scroller.clientWidth - 32) < 700; fit(); };
+    img.alt = small ? (small.getAttribute("alt") || "") : "";
+    img.src = a.getAttribute("href");
+    scroller.appendChild(img);
+    title.textContent = a.getAttribute("data-title") || "";
+    box.hidden = false;
+    document.documentElement.style.overflow = "hidden";
+    scroller.scrollTop = 0; scroller.scrollLeft = 0;
+    if (img.complete && img.naturalWidth) img.onload();
+    closeBtn.focus();
+  }
+  function close() {
+    box.hidden = true;
+    document.documentElement.style.overflow = "";
+    if (img.parentNode) img.parentNode.removeChild(img);
+    img.removeAttribute("src");
+    if (last) last.focus();
+  }
+  Array.prototype.forEach.call(links, function (a) {
+    a.addEventListener("click", function (e) {
+      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button) return;
+      e.preventDefault();
+      open(a);
+    });
+  });
+  closeBtn.addEventListener("click", close);
+  sizeBtn.addEventListener("click", toggle);
+  img.addEventListener("click", toggle);
+  box.addEventListener("click", function (e) { if (e.target === box || e.target === scroller) close(); });
+  document.addEventListener("keydown", function (e) {
+    if (box.hidden) return;
+    if (e.key === "Escape" || e.key === "Esc") { close(); }
+    else if (e.key === "Tab") { e.preventDefault(); (document.activeElement === closeBtn ? sizeBtn : closeBtn).focus(); }
+  });
+  window.addEventListener("resize", function () { if (!box.hidden) fit(); });
+})();
+</script>
 </body>
 </html>
